@@ -13,6 +13,7 @@
 		E9ADF73D24718DB0004E577E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9ADF73B24718DB0004E577E /* Main.storyboard */; };
 		E9ADF73F24718DB2004E577E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9ADF73E24718DB2004E577E /* Assets.xcassets */; };
 		E9ADF74224718DB2004E577E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9ADF74024718DB2004E577E /* LaunchScreen.storyboard */; };
+		E9C9E4E02471930C00E8CF67 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C9E4DF2471930C00E8CF67 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E9ADF73E24718DB2004E577E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9ADF74124718DB2004E577E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9ADF74324718DB2004E577E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9C9E4DF2471930C00E8CF67 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				E9ADF73E24718DB2004E577E /* Assets.xcassets */,
 				E9ADF74024718DB2004E577E /* LaunchScreen.storyboard */,
 				E9ADF74324718DB2004E577E /* Info.plist */,
+				E9C9E4DF2471930C00E8CF67 /* RegisterViewController.swift */,
 			);
 			path = PensandoClassBooker;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				E9ADF73A24718DB0004E577E /* ViewController.swift in Sources */,
 				E9ADF73624718DB0004E577E /* AppDelegate.swift in Sources */,
 				E9ADF73824718DB0004E577E /* SceneDelegate.swift in Sources */,
+				E9C9E4E02471930C00E8CF67 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
