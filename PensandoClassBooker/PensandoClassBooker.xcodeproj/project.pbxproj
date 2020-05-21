@@ -7,16 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E97A598E247425AB002CAB6B /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97A598D247425AB002CAB6B /* CoursesTableViewController.swift */; };
+		E97A5990247425B6002CAB6B /* TutorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97A598F247425B6002CAB6B /* TutorsTableViewController.swift */; };
+		E97A5994247433C8002CAB6B /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97A5993247433C8002CAB6B /* ProfileTableViewController.swift */; };
 		E9ADF73624718DB0004E577E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ADF73524718DB0004E577E /* AppDelegate.swift */; };
 		E9ADF73824718DB0004E577E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ADF73724718DB0004E577E /* SceneDelegate.swift */; };
 		E9ADF73A24718DB0004E577E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ADF73924718DB0004E577E /* ViewController.swift */; };
 		E9ADF73D24718DB0004E577E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9ADF73B24718DB0004E577E /* Main.storyboard */; };
 		E9ADF73F24718DB2004E577E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9ADF73E24718DB2004E577E /* Assets.xcassets */; };
 		E9ADF74224718DB2004E577E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9ADF74024718DB2004E577E /* LaunchScreen.storyboard */; };
-		E9C9E4E02471930C00E8CF67 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C9E4DF2471930C00E8CF67 /* RegisterViewController.swift */; };
+		E9D7FCFC2473A85400053922 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7FCFB2473A85400053922 /* ContactsTableViewController.swift */; };
+		E9D7FCFE2473A86F00053922 /* MyClassesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7FCFD2473A86F00053922 /* MyClassesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E97A598D247425AB002CAB6B /* CoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
+		E97A598F247425B6002CAB6B /* TutorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorsTableViewController.swift; sourceTree = "<group>"; };
+		E97A5993247433C8002CAB6B /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		E9ADF73224718DB0004E577E /* PensandoClassBooker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PensandoClassBooker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9ADF73524718DB0004E577E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9ADF73724718DB0004E577E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,7 +32,8 @@
 		E9ADF73E24718DB2004E577E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9ADF74124718DB2004E577E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9ADF74324718DB2004E577E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E9C9E4DF2471930C00E8CF67 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		E9D7FCFB2473A85400053922 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		E9D7FCFD2473A86F00053922 /* MyClassesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClassesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +73,11 @@
 				E9ADF73E24718DB2004E577E /* Assets.xcassets */,
 				E9ADF74024718DB2004E577E /* LaunchScreen.storyboard */,
 				E9ADF74324718DB2004E577E /* Info.plist */,
-				E9C9E4DF2471930C00E8CF67 /* RegisterViewController.swift */,
+				E97A598D247425AB002CAB6B /* CoursesTableViewController.swift */,
+				E97A598F247425B6002CAB6B /* TutorsTableViewController.swift */,
+				E9D7FCFD2473A86F00053922 /* MyClassesTableViewController.swift */,
+				E97A5993247433C8002CAB6B /* ProfileTableViewController.swift */,
+				E9D7FCFB2473A85400053922 /* ContactsTableViewController.swift */,
 			);
 			path = PensandoClassBooker;
 			sourceTree = "<group>";
@@ -144,7 +156,11 @@
 				E9ADF73A24718DB0004E577E /* ViewController.swift in Sources */,
 				E9ADF73624718DB0004E577E /* AppDelegate.swift in Sources */,
 				E9ADF73824718DB0004E577E /* SceneDelegate.swift in Sources */,
-				E9C9E4E02471930C00E8CF67 /* RegisterViewController.swift in Sources */,
+				E97A598E247425AB002CAB6B /* CoursesTableViewController.swift in Sources */,
+				E9D7FCFE2473A86F00053922 /* MyClassesTableViewController.swift in Sources */,
+				E97A5990247425B6002CAB6B /* TutorsTableViewController.swift in Sources */,
+				E97A5994247433C8002CAB6B /* ProfileTableViewController.swift in Sources */,
+				E9D7FCFC2473A85400053922 /* ContactsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
