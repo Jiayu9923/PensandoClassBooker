@@ -4,11 +4,16 @@
 //
 //  Created by 黄佳钰 on 19/5/20.
 //  Copyright © 2020 Jiayu Huang. All rights reserved.
-//
+//  https://www.tutlane.com/tutorial/ios/ios-uitableview-custom-cell-with-image
 
 import UIKit
 
 class TutorsTableViewController: UITableViewController, UISearchBarDelegate {
+    
+    let SECTION_TUTOR = 0
+    let CELL_TUTOR = "tutorCell"
+    
+    var currentTutors: [Tutor] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +26,8 @@ class TutorsTableViewController: UITableViewController, UISearchBarDelegate {
         
         // Make sure search bar is always visible.
         navigationItem.hidesSearchBarWhenScrolling = false
+        
+        definesPresentationContext = true
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -33,23 +40,34 @@ class TutorsTableViewController: UITableViewController, UISearchBarDelegate {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return currentTutors.count
+    }
+    
+    // set height of cell
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 100
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        let tutorCell =
+            tableView.dequeueReusableCell(withIdentifier: CELL_TUTOR, for: indexPath)
+            as! TutorTableViewCell
+        let tutor = currentTutors[indexPath.row]
+        
+        tutorCell.tutorNameLabel.text = tutor.tutorName
+        tutorCell.tutorIntroLabel.text = tutor.tutorIntro
+        tutorCell.tutorImageView.image = tutor.tutorImage
+        
+        return tutorCell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -95,5 +113,13 @@ class TutorsTableViewController: UITableViewController, UISearchBarDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    // MARK: - Create Defaults
+       
+    func createDefaultTutors() {
+        currentTutors.append(Tutor(tutorName: "FIT1023 - Fundamental of Python", tutorIntro: "This units will teach you how to use pythong. And qwe ssdd ssd sddf sdw ffef dvdve wfef.", tutorImage: UIImage(named: "ChloeBrown")!))
+        currentTutors.append(Tutor(tutorName: "FIT3133 - iOS Development", tutorIntro: "This units will teach you how to develop an iOS application. And qwe ssdd ssd sddf sdw ffef dvdve wfef.", tutorImage: UIImage(named: "ChloeBrown")!))
+    }
 
 }

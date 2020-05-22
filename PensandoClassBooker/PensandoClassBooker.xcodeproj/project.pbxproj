@@ -16,6 +16,12 @@
 		E9ADF73D24718DB0004E577E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9ADF73B24718DB0004E577E /* Main.storyboard */; };
 		E9ADF73F24718DB2004E577E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9ADF73E24718DB2004E577E /* Assets.xcassets */; };
 		E9ADF74224718DB2004E577E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9ADF74024718DB2004E577E /* LaunchScreen.storyboard */; };
+		E9AFBB9A24763A030014C581 /* TutorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AFBB9924763A030014C581 /* TutorTableViewCell.swift */; };
+		E9AFBB9C24763F950014C581 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AFBB9B24763F950014C581 /* Course.swift */; };
+		E9AFBB9E24763FA20014C581 /* Tutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AFBB9D24763FA20014C581 /* Tutor.swift */; };
+		E9AFBBA0247679DF0014C581 /* CourseDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AFBB9F247679DF0014C581 /* CourseDetailsTableViewController.swift */; };
+		E9AFBBA2247679F30014C581 /* TutorDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AFBBA1247679F30014C581 /* TutorDetailsTableViewController.swift */; };
+		E9AFBBA524767CD40014C581 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AFBBA424767CD40014C581 /* CourseTableViewCell.swift */; };
 		E9D7FCFC2473A85400053922 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7FCFB2473A85400053922 /* ContactsTableViewController.swift */; };
 		E9D7FCFE2473A86F00053922 /* MyClassesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7FCFD2473A86F00053922 /* MyClassesTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +38,12 @@
 		E9ADF73E24718DB2004E577E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9ADF74124718DB2004E577E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9ADF74324718DB2004E577E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9AFBB9924763A030014C581 /* TutorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorTableViewCell.swift; sourceTree = "<group>"; };
+		E9AFBB9B24763F950014C581 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		E9AFBB9D24763FA20014C581 /* Tutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutor.swift; sourceTree = "<group>"; };
+		E9AFBB9F247679DF0014C581 /* CourseDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsTableViewController.swift; sourceTree = "<group>"; };
+		E9AFBBA1247679F30014C581 /* TutorDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorDetailsTableViewController.swift; sourceTree = "<group>"; };
+		E9AFBBA424767CD40014C581 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
 		E9D7FCFB2473A85400053922 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		E9D7FCFD2473A86F00053922 /* MyClassesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClassesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +78,7 @@
 		E9ADF73424718DB0004E577E /* PensandoClassBooker */ = {
 			isa = PBXGroup;
 			children = (
+				E9AFBBA3247679FB0014C581 /* Cell */,
 				E9ADF73524718DB0004E577E /* AppDelegate.swift */,
 				E9ADF73724718DB0004E577E /* SceneDelegate.swift */,
 				E9ADF73924718DB0004E577E /* ViewController.swift */,
@@ -73,13 +86,26 @@
 				E9ADF73E24718DB2004E577E /* Assets.xcassets */,
 				E9ADF74024718DB2004E577E /* LaunchScreen.storyboard */,
 				E9ADF74324718DB2004E577E /* Info.plist */,
+				E9AFBB9B24763F950014C581 /* Course.swift */,
+				E9AFBB9D24763FA20014C581 /* Tutor.swift */,
 				E97A598D247425AB002CAB6B /* CoursesTableViewController.swift */,
+				E9AFBB9F247679DF0014C581 /* CourseDetailsTableViewController.swift */,
 				E97A598F247425B6002CAB6B /* TutorsTableViewController.swift */,
+				E9AFBBA1247679F30014C581 /* TutorDetailsTableViewController.swift */,
 				E9D7FCFD2473A86F00053922 /* MyClassesTableViewController.swift */,
 				E97A5993247433C8002CAB6B /* ProfileTableViewController.swift */,
 				E9D7FCFB2473A85400053922 /* ContactsTableViewController.swift */,
 			);
 			path = PensandoClassBooker;
+			sourceTree = "<group>";
+		};
+		E9AFBBA3247679FB0014C581 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E9AFBB9924763A030014C581 /* TutorTableViewCell.swift */,
+				E9AFBBA424767CD40014C581 /* CourseTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,8 +179,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9AFBB9A24763A030014C581 /* TutorTableViewCell.swift in Sources */,
+				E9AFBBA2247679F30014C581 /* TutorDetailsTableViewController.swift in Sources */,
+				E9AFBBA0247679DF0014C581 /* CourseDetailsTableViewController.swift in Sources */,
+				E9AFBB9C24763F950014C581 /* Course.swift in Sources */,
 				E9ADF73A24718DB0004E577E /* ViewController.swift in Sources */,
 				E9ADF73624718DB0004E577E /* AppDelegate.swift in Sources */,
+				E9AFBBA524767CD40014C581 /* CourseTableViewCell.swift in Sources */,
+				E9AFBB9E24763FA20014C581 /* Tutor.swift in Sources */,
 				E9ADF73824718DB0004E577E /* SceneDelegate.swift in Sources */,
 				E97A598E247425AB002CAB6B /* CoursesTableViewController.swift in Sources */,
 				E9D7FCFE2473A86F00053922 /* MyClassesTableViewController.swift in Sources */,
