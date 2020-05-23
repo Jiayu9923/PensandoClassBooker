@@ -20,6 +20,9 @@ class CourseDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.barTintColor = UIColor.systemTeal
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        
         //self.tabBarController?.tabBar.isHidden = true
         self.navigationItem.title = course!.courseCode
         
@@ -28,22 +31,25 @@ class CourseDetailViewController: UIViewController {
         }
         
         courseImageView.image = course.courseImage
-        courseCodeLabel.text = "\(course.courseCode)"
-        courseNameLabel.text = "\(course.courseName)"
+        courseCodeLabel.text = course.courseCode
+        courseNameLabel.text = course.courseName
         courseIntroLabel.text = "Introduction: \(course.courseIntro)"
 
         // Do any additional setup after loading the view.
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "bookCourseSegue" {
+            let destination = segue.destination as! SelectDateViewController
+            destination.course?.courseCode = self.courseCodeLabel.text!
+            destination.course?.courseName = self.courseNameLabel.text!
+        }
     }
-    */
+    
 
 }

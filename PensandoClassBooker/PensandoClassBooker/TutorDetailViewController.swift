@@ -19,6 +19,9 @@ class TutorDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.barTintColor = UIColor.systemTeal
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        
         self.navigationItem.title = tutor!.tutorName
         
         guard let tutor = tutor else {
@@ -26,7 +29,7 @@ class TutorDetailViewController: UIViewController {
         }
         
         tutorImageView.image = tutor.tutorImage
-        tutorNameLabel.text = "\(tutor.tutorName)"
+        tutorNameLabel.text = tutor.tutorName
         tutorIntroLabel.text = "Introduction: \(tutor.tutorIntro)"
 
         // Do any additional setup after loading the view.

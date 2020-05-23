@@ -9,9 +9,15 @@
 import UIKit
 
 class ProfileTableViewController: UITableViewController {
+    
+    let SECTION_USER = 0
+    let CELL_USER = "userCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.barTintColor = UIColor.systemTeal
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
 
 
         // Uncomment the following line to preserve selection between presentations

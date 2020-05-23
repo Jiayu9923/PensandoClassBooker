@@ -19,12 +19,16 @@ class CoursesTableViewController: UITableViewController, UISearchBarDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.barTintColor = UIColor.systemTeal
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        
         createDefaultCourses()
         
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.delegate = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search courses..."
+        searchController.searchBar.backgroundColor = UIColor.white
         navigationItem.searchController = searchController
         
         // Make sure search bar is always visible.

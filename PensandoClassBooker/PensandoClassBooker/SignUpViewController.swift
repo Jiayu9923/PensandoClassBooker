@@ -1,5 +1,5 @@
 //
-//  SelectDateViewController.swift
+//  SignUpViewController.swift
 //  PensandoClassBooker
 //
 //  Created by 黄佳钰 on 2020/5/23.
@@ -8,27 +8,13 @@
 
 import UIKit
 
-class SelectDateViewController: UIViewController {
-    
-    var course: Course?
-
-    @IBOutlet weak var courseCodeLabel: UILabel!
-    @IBOutlet weak var courseNameLabel: UILabel!
+class SignUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.navigationBar.barTintColor = UIColor.systemTeal
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-        
-        guard let course = course else {
-        return
-        }
-        
-        courseCodeLabel.text = course.courseCode
-        courseNameLabel.text = course.courseName
-        
-        //self.tabBarController?.tabBar.isHidden = true
 
         // Do any additional setup after loading the view.
     }
