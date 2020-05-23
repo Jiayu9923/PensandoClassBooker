@@ -13,11 +13,13 @@ class Tutor: NSObject {
     var tutorName: String
     var tutorIntro: String
     var tutorImage: UIImage
+    //var tutorCourses: [Course]
     
     init(tutorName: String, tutorIntro: String, tutorImage: UIImage) {
         self.tutorName = tutorName
         self.tutorIntro = tutorIntro
         self.tutorImage = tutorImage
+        //self.tutorCourses = tutorCourses
     }
 
 }

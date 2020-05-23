@@ -14,12 +14,14 @@ class Course: NSObject {
     var courseName: String
     var courseIntro: String
     var courseImage: UIImage
+    var courseTutors: [Tutor]
     
-    init(courseCode: String, courseName: String, courseIntro: String, courseImage: UIImage) {
+    init(courseCode: String, courseName: String, courseIntro: String, courseImage: UIImage, courseTutors: [Tutor]) {
         self.courseCode = courseCode
         self.courseName = courseName
         self.courseIntro = courseIntro
         self.courseImage = courseImage
+        self.courseTutors = courseTutors
     }
 
 }

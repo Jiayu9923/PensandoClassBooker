@@ -19,11 +19,12 @@
 		E9AFBB9A24763A030014C581 /* TutorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AFBB9924763A030014C581 /* TutorTableViewCell.swift */; };
 		E9AFBB9C24763F950014C581 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AFBB9B24763F950014C581 /* Course.swift */; };
 		E9AFBB9E24763FA20014C581 /* Tutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AFBB9D24763FA20014C581 /* Tutor.swift */; };
-		E9AFBBA0247679DF0014C581 /* CourseDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AFBB9F247679DF0014C581 /* CourseDetailsTableViewController.swift */; };
-		E9AFBBA2247679F30014C581 /* TutorDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AFBBA1247679F30014C581 /* TutorDetailsTableViewController.swift */; };
 		E9AFBBA524767CD40014C581 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AFBBA424767CD40014C581 /* CourseTableViewCell.swift */; };
 		E9D7FCFC2473A85400053922 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7FCFB2473A85400053922 /* ContactsTableViewController.swift */; };
 		E9D7FCFE2473A86F00053922 /* MyClassesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7FCFD2473A86F00053922 /* MyClassesTableViewController.swift */; };
+		E9E2EC0324790ECD00302537 /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2EC0224790ECD00302537 /* CourseDetailViewController.swift */; };
+		E9E2EC052479124200302537 /* SelectDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2EC042479124200302537 /* SelectDateViewController.swift */; };
+		E9E2EC0724793E6300302537 /* TutorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2EC0624793E6300302537 /* TutorDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,11 +42,12 @@
 		E9AFBB9924763A030014C581 /* TutorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorTableViewCell.swift; sourceTree = "<group>"; };
 		E9AFBB9B24763F950014C581 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		E9AFBB9D24763FA20014C581 /* Tutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutor.swift; sourceTree = "<group>"; };
-		E9AFBB9F247679DF0014C581 /* CourseDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsTableViewController.swift; sourceTree = "<group>"; };
-		E9AFBBA1247679F30014C581 /* TutorDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorDetailsTableViewController.swift; sourceTree = "<group>"; };
 		E9AFBBA424767CD40014C581 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
 		E9D7FCFB2473A85400053922 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		E9D7FCFD2473A86F00053922 /* MyClassesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClassesTableViewController.swift; sourceTree = "<group>"; };
+		E9E2EC0224790ECD00302537 /* CourseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailViewController.swift; sourceTree = "<group>"; };
+		E9E2EC042479124200302537 /* SelectDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateViewController.swift; sourceTree = "<group>"; };
+		E9E2EC0624793E6300302537 /* TutorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,12 +91,13 @@
 				E9AFBB9B24763F950014C581 /* Course.swift */,
 				E9AFBB9D24763FA20014C581 /* Tutor.swift */,
 				E97A598D247425AB002CAB6B /* CoursesTableViewController.swift */,
-				E9AFBB9F247679DF0014C581 /* CourseDetailsTableViewController.swift */,
+				E9E2EC0224790ECD00302537 /* CourseDetailViewController.swift */,
 				E97A598F247425B6002CAB6B /* TutorsTableViewController.swift */,
-				E9AFBBA1247679F30014C581 /* TutorDetailsTableViewController.swift */,
+				E9E2EC0624793E6300302537 /* TutorDetailViewController.swift */,
 				E9D7FCFD2473A86F00053922 /* MyClassesTableViewController.swift */,
 				E97A5993247433C8002CAB6B /* ProfileTableViewController.swift */,
 				E9D7FCFB2473A85400053922 /* ContactsTableViewController.swift */,
+				E9E2EC042479124200302537 /* SelectDateViewController.swift */,
 			);
 			path = PensandoClassBooker;
 			sourceTree = "<group>";
@@ -179,9 +182,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9E2EC052479124200302537 /* SelectDateViewController.swift in Sources */,
 				E9AFBB9A24763A030014C581 /* TutorTableViewCell.swift in Sources */,
-				E9AFBBA2247679F30014C581 /* TutorDetailsTableViewController.swift in Sources */,
-				E9AFBBA0247679DF0014C581 /* CourseDetailsTableViewController.swift in Sources */,
 				E9AFBB9C24763F950014C581 /* Course.swift in Sources */,
 				E9ADF73A24718DB0004E577E /* ViewController.swift in Sources */,
 				E9ADF73624718DB0004E577E /* AppDelegate.swift in Sources */,
@@ -189,6 +191,8 @@
 				E9AFBB9E24763FA20014C581 /* Tutor.swift in Sources */,
 				E9ADF73824718DB0004E577E /* SceneDelegate.swift in Sources */,
 				E97A598E247425AB002CAB6B /* CoursesTableViewController.swift in Sources */,
+				E9E2EC0724793E6300302537 /* TutorDetailViewController.swift in Sources */,
+				E9E2EC0324790ECD00302537 /* CourseDetailViewController.swift in Sources */,
 				E9D7FCFE2473A86F00053922 /* MyClassesTableViewController.swift in Sources */,
 				E97A5990247425B6002CAB6B /* TutorsTableViewController.swift in Sources */,
 				E97A5994247433C8002CAB6B /* ProfileTableViewController.swift in Sources */,

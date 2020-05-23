@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m3i-ef-J8j">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m3i-ef-J8j">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,7 +34,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ofW-BL-cC1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4726" y="1598"/>
+            <point key="canvasLocation" x="4867" y="1580"/>
         </scene>
         <!--Courses-->
         <scene sceneID="fhG-8h-HlC">
@@ -104,7 +105,7 @@
                                     <outlet property="courseCodeLabel" destination="M2l-0J-wnR" id="cNq-jj-Kc5"/>
                                     <outlet property="courseImageView" destination="BeX-wb-4wy" id="lLb-TS-xaz"/>
                                     <outlet property="courseNameLabel" destination="tpF-J9-99I" id="Jeo-xE-ZOk"/>
-                                    <segue destination="gmA-QM-uU2" kind="show" identifier="courseSegue" id="zEA-vn-YLC"/>
+                                    <segue destination="P2A-Ez-8c4" kind="show" identifier="courseSegue" id="Mlr-6u-rVS"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -120,24 +121,143 @@
             </objects>
             <point key="canvasLocation" x="2279.7101449275365" y="859.82142857142856"/>
         </scene>
-        <!--courseName-->
-        <scene sceneID="fmG-HP-J2I">
+        <!--courseCode-->
+        <scene sceneID="xfn-Pn-NWv">
             <objects>
-                <tableViewController id="gmA-QM-uU2" customClass="CourseDetailsTableViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qpb-4z-lIW">
+                <viewController id="P2A-Ez-8c4" customClass="CourseDetailViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4zG-wg-g5b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oDi-7K-DhI">
+                                <rect key="frame" x="57" y="108" width="300" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="agF-QK-qme"/>
+                                    <constraint firstAttribute="height" constant="200" id="y3d-4h-Zjf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="courseCode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwK-qg-Uqu">
+                                <rect key="frame" x="16" y="324" width="382" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="courseName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6YE-Lz-41i">
+                                <rect key="frame" x="16" y="356" width="382" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="courseIntro" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghe-iW-tzd">
+                                <rect key="frame" x="20" y="408" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6YE-Lz-41i" firstAttribute="top" secondItem="lwK-qg-Uqu" secondAttribute="bottom" constant="8" id="1gI-G4-4Aw"/>
+                            <constraint firstItem="0Xn-Dm-tns" firstAttribute="trailing" secondItem="6YE-Lz-41i" secondAttribute="trailing" constant="16" id="2mY-hk-Org"/>
+                            <constraint firstItem="lwK-qg-Uqu" firstAttribute="leading" secondItem="0Xn-Dm-tns" secondAttribute="leading" constant="16" id="3es-a5-fGQ"/>
+                            <constraint firstItem="0Xn-Dm-tns" firstAttribute="trailing" secondItem="ghe-iW-tzd" secondAttribute="trailing" constant="20" id="6YR-Gf-NUB"/>
+                            <constraint firstItem="0Xn-Dm-tns" firstAttribute="trailing" secondItem="oDi-7K-DhI" secondAttribute="trailing" constant="57" id="J4A-k0-jCB"/>
+                            <constraint firstItem="lwK-qg-Uqu" firstAttribute="top" secondItem="oDi-7K-DhI" secondAttribute="bottom" constant="16" id="PH6-AJ-0gc"/>
+                            <constraint firstItem="0Xn-Dm-tns" firstAttribute="trailing" secondItem="lwK-qg-Uqu" secondAttribute="trailing" constant="16" id="X8S-eF-o1l"/>
+                            <constraint firstItem="ghe-iW-tzd" firstAttribute="leading" secondItem="0Xn-Dm-tns" secondAttribute="leading" constant="20" id="jn9-jO-Czh"/>
+                            <constraint firstItem="oDi-7K-DhI" firstAttribute="leading" secondItem="0Xn-Dm-tns" secondAttribute="leading" constant="57" id="jzp-4C-SDD"/>
+                            <constraint firstItem="6YE-Lz-41i" firstAttribute="leading" secondItem="0Xn-Dm-tns" secondAttribute="leading" constant="16" id="mt5-Cr-FJM"/>
+                            <constraint firstItem="ghe-iW-tzd" firstAttribute="top" secondItem="6YE-Lz-41i" secondAttribute="bottom" constant="30" id="ntP-d0-ir0"/>
+                            <constraint firstItem="oDi-7K-DhI" firstAttribute="top" secondItem="0Xn-Dm-tns" secondAttribute="top" constant="20" id="taf-A5-rPd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Xn-Dm-tns"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="courseCode" id="mbg-N4-y7p">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="r5h-eD-snf">
+                            <connections>
+                                <segue destination="qiN-Ic-dzM" kind="show" identifier="bookCourseSegue" id="U7r-X5-Ccl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="courseCodeLabel" destination="lwK-qg-Uqu" id="HuK-SM-EhL"/>
+                        <outlet property="courseImageView" destination="oDi-7K-DhI" id="qEI-9j-ZFK"/>
+                        <outlet property="courseIntroLabel" destination="ghe-iW-tzd" id="CF2-PN-yfb"/>
+                        <outlet property="courseNameLabel" destination="6YE-Lz-41i" id="zjL-Lb-Tvz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9uJ-Qm-rOq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2279.7101449275365" y="1580.3571428571429"/>
+        </scene>
+        <!--tutorName-->
+        <scene sceneID="o0O-cH-D5W">
+            <objects>
+                <viewController id="GsF-GP-7Yb" customClass="TutorDetailViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I6q-ee-D3v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yJe-zi-yfC">
+                                <rect key="frame" x="107" y="108" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="7fS-TS-0p7"/>
+                                    <constraint firstAttribute="height" constant="200" id="am0-cq-Hfd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tutorName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Z4-Xj-qLv">
+                                <rect key="frame" x="157.5" y="328" width="101" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tutorIntro" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1mW-Ny-M5M">
+                                <rect key="frame" x="16" y="368" width="382" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="air-Vf-tnF" firstAttribute="trailing" secondItem="7Z4-Xj-qLv" secondAttribute="trailing" constant="155.5" id="1V4-9v-tZz"/>
+                            <constraint firstItem="7Z4-Xj-qLv" firstAttribute="top" secondItem="yJe-zi-yfC" secondAttribute="bottom" constant="20" id="2jQ-BO-VIe"/>
+                            <constraint firstItem="7Z4-Xj-qLv" firstAttribute="leading" secondItem="air-Vf-tnF" secondAttribute="leading" constant="157.5" id="8Kd-js-SCG"/>
+                            <constraint firstItem="1mW-Ny-M5M" firstAttribute="top" secondItem="air-Vf-tnF" secondAttribute="top" constant="280" id="E4l-BD-0uU"/>
+                            <constraint firstItem="air-Vf-tnF" firstAttribute="trailing" secondItem="1mW-Ny-M5M" secondAttribute="trailing" constant="16" id="Ejj-e7-YqU"/>
+                            <constraint firstItem="yJe-zi-yfC" firstAttribute="top" secondItem="air-Vf-tnF" secondAttribute="top" constant="20" id="Rdg-in-ytJ"/>
+                            <constraint firstItem="air-Vf-tnF" firstAttribute="trailing" secondItem="yJe-zi-yfC" secondAttribute="trailing" constant="107" id="fT3-uX-hyk"/>
+                            <constraint firstItem="1mW-Ny-M5M" firstAttribute="leading" secondItem="air-Vf-tnF" secondAttribute="leading" constant="16" id="hNQ-4t-TPh"/>
+                            <constraint firstItem="yJe-zi-yfC" firstAttribute="leading" secondItem="air-Vf-tnF" secondAttribute="leading" constant="107" id="jkd-Vz-9dK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="air-Vf-tnF"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="tutorName" id="Qlq-gy-NWU"/>
+                    <connections>
+                        <outlet property="tutorImageView" destination="yJe-zi-yfC" id="I1v-OF-OmR"/>
+                        <outlet property="tutorIntroLabel" destination="1mW-Ny-M5M" id="Jhy-aJ-gfq"/>
+                        <outlet property="tutorNameLabel" destination="7Z4-Xj-qLv" id="FT7-gn-kz1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RBS-Ae-kqW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3308.6956521739135" y="1579.6875"/>
+        </scene>
+        <!--Select Date-->
+        <scene sceneID="Mz6-J4-3bs">
+            <objects>
+                <viewController id="qiN-Ic-dzM" customClass="SelectDateViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oDQ-ca-SQC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <connections>
-                            <outlet property="dataSource" destination="gmA-QM-uU2" id="FwF-gX-lsO"/>
-                            <outlet property="delegate" destination="gmA-QM-uU2" id="UOO-Tw-xFP"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="courseName" id="ZPD-Ao-9zm"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1El-DC-P2K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <viewLayoutGuide key="safeArea" id="xyt-S3-l5I"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select Date" id="KHJ-HM-l2D"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dHt-uR-2jk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2279.7101449275365" y="1559.5982142857142"/>
+            <point key="canvasLocation" x="2280" y="2309"/>
         </scene>
         <!--Tutors-->
         <scene sceneID="pqT-Xw-7yb">
@@ -185,7 +305,7 @@
                                     <outlet property="tutorImageView" destination="yVC-27-8aO" id="yE2-8S-E1x"/>
                                     <outlet property="tutorIntroLabel" destination="89U-4x-mjV" id="8NW-Cg-nD5"/>
                                     <outlet property="tutorNameLabel" destination="Wbo-w3-AUn" id="hbI-by-2ce"/>
-                                    <segue destination="H1p-1G-lo9" kind="show" id="fuf-2w-woH"/>
+                                    <segue destination="GsF-GP-7Yb" kind="show" identifier="tutorSegue" id="oee-nJ-ci5"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -342,40 +462,12 @@
             </objects>
             <point key="canvasLocation" x="5171" y="144"/>
         </scene>
-        <!--tutorName-->
-        <scene sceneID="dbj-6c-Chv">
-            <objects>
-                <tableViewController id="H1p-1G-lo9" customClass="TutorDetailsTableViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Kzt-Gn-Pc6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mSZ-dP-K0e">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mSZ-dP-K0e" id="5tl-bK-RMg">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="H1p-1G-lo9" id="xeJ-49-bcD"/>
-                            <outlet property="delegate" destination="H1p-1G-lo9" id="vOS-mX-iw9"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="tutorName" id="9ns-Ah-ssY"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Rc-8v-RkI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3309" y="1560"/>
-        </scene>
     </scenes>
     <resources>
         <image name="courses" width="23" height="23"/>
         <image name="me" width="23" height="23"/>
         <image name="myClasses" width="23" height="23"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="tutors" width="23" height="23"/>
     </resources>
 </document>

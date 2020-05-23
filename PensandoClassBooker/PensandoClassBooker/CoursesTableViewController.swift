@@ -99,7 +99,7 @@ class CoursesTableViewController: UITableViewController, UISearchBarDelegate{
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "courseSegue" {
-            let destination = segue.destination as! CourseDetailsTableViewController
+            let destination = segue.destination as! CourseDetailViewController
             let selectedIndexPath = tableView.indexPathsForSelectedRows?.first
             destination.course = currentCourses[selectedIndexPath!.row]
         }
@@ -110,8 +110,8 @@ class CoursesTableViewController: UITableViewController, UISearchBarDelegate{
     // MARK: - Create Defaults
        
     func createDefaultCourses() {
-        currentCourses.append(Course(courseCode: "FIT1023", courseName: "Fundamental of Python", courseIntro: "This course will teach you how to user Python.", courseImage: UIImage(named: "Python")!))
-        currentCourses.append(Course(courseCode: "FIT3133", courseName: "iOS Development", courseIntro: "This course will teach you how to develop an iOS application.", courseImage: UIImage(named: "ChloeBrown")!))
+        currentCourses.append(Course(courseCode: "FIT1023", courseName: "Fundamental of Python", courseIntro: "This course will teach you how to user Python.", courseImage: UIImage(named: "Python")!, courseTutors: [Tutor(tutorName: "Chloe", tutorIntro: "This is Chloe.", tutorImage: UIImage(named: "ChloeBrown")!)]))
+        currentCourses.append(Course(courseCode: "FIT3133", courseName: "iOS Development", courseIntro: "This course will teach you how to develop an iOS application.", courseImage: UIImage(named: "ChloeBrown")!, courseTutors: [Tutor(tutorName: "Anna", tutorIntro: "This is Anna.", tutorImage: UIImage(named: "ChloeBrown")!)]))
     }
 
 }

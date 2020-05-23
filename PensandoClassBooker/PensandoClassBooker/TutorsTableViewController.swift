@@ -18,6 +18,8 @@ class TutorsTableViewController: UITableViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        createDefaultTutors()
+        
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.delegate = self
         searchController.obscuresBackgroundDuringPresentation = false
@@ -104,22 +106,25 @@ class TutorsTableViewController: UITableViewController, UISearchBarDelegate {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "tutorSegue" {
+            let destination = segue.destination as! TutorDetailViewController
+            let selectedIndexPath = tableView.indexPathsForSelectedRows?.first
+            destination.tutor = currentTutors[selectedIndexPath!.row]
+        }
     }
-    */
+    
     
     
     // MARK: - Create Defaults
        
     func createDefaultTutors() {
-        currentTutors.append(Tutor(tutorName: "FIT1023 - Fundamental of Python", tutorIntro: "This units will teach you how to use pythong. And qwe ssdd ssd sddf sdw ffef dvdve wfef.", tutorImage: UIImage(named: "ChloeBrown")!))
-        currentTutors.append(Tutor(tutorName: "FIT3133 - iOS Development", tutorIntro: "This units will teach you how to develop an iOS application. And qwe ssdd ssd sddf sdw ffef dvdve wfef.", tutorImage: UIImage(named: "ChloeBrown")!))
+        currentTutors.append(Tutor(tutorName: "Chloe", tutorIntro: "This units will teach you how to use pythong. And qwe ssdd ssd sddf sdw ffef dvdve wfef.", tutorImage: UIImage(named: "ChloeBrown")!))
+        currentTutors.append(Tutor(tutorName: "Anna", tutorIntro: "This units will teach you how to develop an iOS application. And qwe ssdd ssd sddf sdw ffef dvdve wfef.", tutorImage: UIImage(named: "ChloeBrown")!))
     }
 
 }
