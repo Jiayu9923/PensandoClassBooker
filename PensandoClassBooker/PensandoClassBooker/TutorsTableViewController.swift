@@ -8,20 +8,22 @@
 
 import UIKit
 
-class TutorsTableViewController: UITableViewController, UISearchBarDelegate {
+class TutorsTableViewController: UITableViewController, UISearchBarDelegate, DatabaseListener {
+    
+    weak var databaseController: DatabaseProtocol?
+    var listenerType: ListenerType = .all
     
     let SECTION_TUTOR = 0
     let CELL_TUTOR = "tutorCell"
     
     var currentTutors: [Tutor] = []
+    var filteredTutors: [Tutor] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.navigationBar.barTintColor = UIColor.systemTeal
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-
-        createDefaultTutors()
         
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.delegate = self
@@ -40,6 +42,50 @@ class TutorsTableViewController: UITableViewController, UISearchBarDelegate {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    // add/remove the VC as a listener of the database controller
+    override func viewWillAppear(_ animated: Bool){
+        super.viewWillAppear(animated)
+        databaseController?.addListener(listener: self)
+        
+    }
+    
+    // add/remove the VC as a listener of the database controller
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        databaseController?.removeListener(listener: self)
+        
+    }
+    
+    // MARK: - Search Controller Delegate
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let searchText = searchController.searchBar.text?.lowercased() else {
+            return
+        }
+
+        if searchText.count > 0 {
+            filteredTutors = currentTutors.filter({ (tutor: Tutor) -> Bool in
+                guard let tutorName = tutor.tutorName else {
+                    return false
+                 }
+                  return tutorName.lowercased().contains(searchText)
+            })
+        } else {
+            filteredTutors = currentTutors
+        }
+
+        tableView.reloadData()
+    }
+    
+    func onCourseListChange(change: DatabaseChange, listCourses: [Course]) {
+        //updateSearchResults(for: navigationItem.searchController!)
+    }
+    
+    func onTutorListChange(change: DatabaseChange, listTutors: [Tutor]) {
+        currentTutors = listTutors
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -69,7 +115,7 @@ class TutorsTableViewController: UITableViewController, UISearchBarDelegate {
         
         tutorCell.tutorNameLabel.text = tutor.tutorName
         tutorCell.tutorIntroLabel.text = tutor.tutorIntro
-        tutorCell.tutorImageView.image = tutor.tutorImage
+        tutorCell.tutorImageView.image = UIImage(named: tutor.tutorImage!)
         
         return tutorCell
     }
@@ -84,10 +130,7 @@ class TutorsTableViewController: UITableViewController, UISearchBarDelegate {
     */
 
     /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
+     // Override to support editing the table velete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -121,14 +164,4 @@ class TutorsTableViewController: UITableViewController, UISearchBarDelegate {
             destination.tutor = currentTutors[selectedIndexPath!.row]
         }
     }
-    
-    
-    
-    // MARK: - Create Defaults
-       
-    func createDefaultTutors() {
-        currentTutors.append(Tutor(tutorName: "Chloe", tutorIntro: "This units will teach you how to use pythong. And qwe ssdd ssd sddf sdw ffef dvdve wfef.", tutorImage: UIImage(named: "ChloeBrown")!))
-        currentTutors.append(Tutor(tutorName: "Anna", tutorIntro: "This units will teach you how to develop an iOS application. And qwe ssdd ssd sddf sdw ffef dvdve wfef.", tutorImage: UIImage(named: "ChloeBrown")!))
-    }
-
 }

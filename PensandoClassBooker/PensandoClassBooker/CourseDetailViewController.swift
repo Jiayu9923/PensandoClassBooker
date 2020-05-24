@@ -30,10 +30,10 @@ class CourseDetailViewController: UIViewController {
         return
         }
         
-        courseImageView.image = course.courseImage
+        courseImageView.image = UIImage(named: course.courseImage!)
         courseCodeLabel.text = course.courseCode
         courseNameLabel.text = course.courseName
-        courseIntroLabel.text = "Introduction: \(course.courseIntro)"
+        courseIntroLabel.text = "Introduction: \(String(describing: course.courseIntro))"
 
         // Do any additional setup after loading the view.
     }

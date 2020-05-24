@@ -15,7 +15,9 @@ class TutorDetailViewController: UIViewController {
     @IBOutlet weak var tutorImageView: UIImageView!
     @IBOutlet weak var tutorNameLabel: UILabel!
     @IBOutlet weak var tutorIntroLabel: UILabel!
-
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var ageLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,9 +30,11 @@ class TutorDetailViewController: UIViewController {
         return
         }
         
-        tutorImageView.image = tutor.tutorImage
+        tutorImageView.image = UIImage(named: tutor.tutorImage!)
         tutorNameLabel.text = tutor.tutorName
-        tutorIntroLabel.text = "Introduction: \(tutor.tutorIntro)"
+        genderLabel.text = "Gender: \(String(describing: tutor.gender))"
+        ageLabel.text = "Age: \(String(describing: tutor.age))"
+        tutorIntroLabel.text = "Introduction: \(String(describing: tutor.tutorIntro))"
 
         // Do any additional setup after loading the view.
     }

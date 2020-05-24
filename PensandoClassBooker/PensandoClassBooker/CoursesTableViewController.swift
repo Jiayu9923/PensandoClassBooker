@@ -8,7 +8,10 @@
 
 import UIKit
 
-class CoursesTableViewController: UITableViewController, UISearchBarDelegate{
+class CoursesTableViewController: UITableViewController, UISearchBarDelegate, DatabaseListener{
+    
+    weak var databaseController: DatabaseProtocol?
+    var listenerType: ListenerType = .all
     
     let SECTION_COURSE = 0
     let CELL_COURSE = "courseCell"
@@ -19,10 +22,12 @@ class CoursesTableViewController: UITableViewController, UISearchBarDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        databaseController = appDelegate.databaseController
+        
         navigationController?.navigationBar.barTintColor = UIColor.systemTeal
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         
-        createDefaultCourses()
         
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.delegate = self
@@ -42,25 +47,52 @@ class CoursesTableViewController: UITableViewController, UISearchBarDelegate{
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    // add/remove the VC as a listener of the database controller
+    override func viewWillAppear(_ animated: Bool){
+        super.viewWillAppear(animated)
+        databaseController?.addListener(listener: self)
+        
+    }
+    
+    // add/remove the VC as a listener of the database controller
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        databaseController?.removeListener(listener: self)
+        
+    }
 
     
     // MARK: - Search Controller Delegate
     
-//    func updateSearchResults(for searchController: UISearchController) {
-//        guard let searchText = searchController.searchBar.text?.lowercased() else {
-//            return
-//        }
-//
-//        if searchText.count > 0 {
-//            filteredCourses = currentCourses.filter({ (course: Course) -> Bool in
-//                return course.courseName.lowercased().contains(searchText)
-//            })
-//        } else {
-//            filteredCourses = currentCourses
-//        }
-//
-//        tableView.reloadData()
-//    }
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let searchText = searchController.searchBar.text?.lowercased() else {
+            return
+        }
+
+        if searchText.count > 0 {
+            filteredCourses = currentCourses.filter({ (course: Course) -> Bool in
+                guard let courseName = course.courseName else {
+                    return false
+                 }
+                  return courseName.lowercased().contains(searchText)
+            })
+        } else {
+            filteredCourses = currentCourses
+        }
+
+        tableView.reloadData()
+    }
+    
+    func onCourseListChange(change: DatabaseChange, listCourses: [Course]) {
+        currentCourses = listCourses
+        tableView.reloadData()
+        //updateSearchResults(for: navigationItem.searchController!)
+    }
+    
+    func onTutorListChange(change: DatabaseChange, listTutors: [Tutor]) {
+
+    }
     
     
     // MARK: - Table view data source
@@ -84,13 +116,12 @@ class CoursesTableViewController: UITableViewController, UISearchBarDelegate{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let courseCell =
-            tableView.dequeueReusableCell(withIdentifier: CELL_COURSE, for: indexPath)
-            as! CourseTableViewCell
+            tableView.dequeueReusableCell(withIdentifier: CELL_COURSE, for: indexPath) as! CourseTableViewCell
         let course = currentCourses[indexPath.row]
         
         courseCell.courseCodeLabel.text = course.courseCode
         courseCell.courseNameLabel.text = course.courseName
-        courseCell.courseImageView.image = course.courseImage
+        courseCell.courseImageView.image = UIImage(named: course.courseImage!)
         
         return courseCell
     }
@@ -107,15 +138,6 @@ class CoursesTableViewController: UITableViewController, UISearchBarDelegate{
             let selectedIndexPath = tableView.indexPathsForSelectedRows?.first
             destination.course = currentCourses[selectedIndexPath!.row]
         }
-    }
-    
-    
-    
-    // MARK: - Create Defaults
-       
-    func createDefaultCourses() {
-        currentCourses.append(Course(courseCode: "FIT1023", courseName: "Fundamental of Python", courseIntro: "This course will teach you how to user Python.", courseImage: UIImage(named: "Python")!, courseTutors: [Tutor(tutorName: "Chloe", tutorIntro: "This is Chloe.", tutorImage: UIImage(named: "ChloeBrown")!)]))
-        currentCourses.append(Course(courseCode: "FIT3133", courseName: "iOS Development", courseIntro: "This course will teach you how to develop an iOS application.", courseImage: UIImage(named: "ChloeBrown")!, courseTutors: [Tutor(tutorName: "Anna", tutorIntro: "This is Anna.", tutorImage: UIImage(named: "ChloeBrown")!)]))
     }
 
 }

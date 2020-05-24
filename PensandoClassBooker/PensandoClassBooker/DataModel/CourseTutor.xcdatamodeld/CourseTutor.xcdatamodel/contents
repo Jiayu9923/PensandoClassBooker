@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E2269" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Course" representedClassName="Course" syncable="YES">
+        <attribute name="courseCode" optional="YES" attributeType="String"/>
+        <attribute name="courseImage" optional="YES" attributeType="String"/>
+        <attribute name="courseIntro" optional="YES" attributeType="String"/>
+        <attribute name="courseName" optional="YES" attributeType="String"/>
+        <relationship name="courseTutor" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tutor" inverseName="tutorCourse" inverseEntity="Tutor"/>
+    </entity>
+    <entity name="Tutor" representedClassName="Tutor" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="String"/>
+        <attribute name="gender" optional="YES" attributeType="String"/>
+        <attribute name="tutorImage" optional="YES" attributeType="String"/>
+        <attribute name="tutorIntro" optional="YES" attributeType="String"/>
+        <attribute name="tutorName" optional="YES" attributeType="String"/>
+        <relationship name="tutorCourse" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Course" inverseName="courseTutor" inverseEntity="Course"/>
+    </entity>
+    <elements>
+        <element name="Course" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="Tutor" positionX="-54" positionY="18" width="128" height="133"/>
+    </elements>
+</model>
