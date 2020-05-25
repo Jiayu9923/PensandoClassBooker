@@ -16,7 +16,8 @@ class CourseDetailViewController: UIViewController {
     @IBOutlet weak var courseImageView: UIImageView!
     @IBOutlet weak var courseNameLabel: UILabel!
     @IBOutlet weak var courseIntroLabel: UILabel!
-
+    @IBOutlet weak var courseTutorLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,10 +31,13 @@ class CourseDetailViewController: UIViewController {
         return
         }
         
+        
         courseImageView.image = UIImage(named: course.courseImage!)
         courseCodeLabel.text = course.courseCode
         courseNameLabel.text = course.courseName
-        courseIntroLabel.text = "Introduction: \(String(describing: course.courseIntro))"
+        courseIntroLabel.text = "Introduction: \(String(describing: course.courseIntro!))"
+        courseTutorLabel.text = "Tutors: "
+        //courseTutorLabel.text = "Tutors: \(String(describing: course.courseTutor.tutorName!))"
 
         // Do any additional setup after loading the view.
     }
@@ -46,8 +50,7 @@ class CourseDetailViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "bookCourseSegue" {
             let destination = segue.destination as! SelectDateViewController
-            destination.course?.courseCode = self.courseCodeLabel.text!
-            destination.course?.courseName = self.courseNameLabel.text!
+            destination.course = self.course
         }
     }
     

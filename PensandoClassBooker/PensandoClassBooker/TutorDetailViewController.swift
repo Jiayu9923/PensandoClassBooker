@@ -31,10 +31,10 @@ class TutorDetailViewController: UIViewController {
         }
         
         tutorImageView.image = UIImage(named: tutor.tutorImage!)
-        tutorNameLabel.text = tutor.tutorName
-        genderLabel.text = "Gender: \(String(describing: tutor.gender))"
-        ageLabel.text = "Age: \(String(describing: tutor.age))"
-        tutorIntroLabel.text = "Introduction: \(String(describing: tutor.tutorIntro))"
+        tutorNameLabel.text = tutor.tutorName!
+        genderLabel.text = "Gender: \(String(describing: tutor.gender!))"
+        ageLabel.text = "Age: \(String(describing: tutor.age!))"
+        tutorIntroLabel.text = "Introduction: \(String(describing: tutor.tutorIntro!))"
 
         // Do any additional setup after loading the view.
     }

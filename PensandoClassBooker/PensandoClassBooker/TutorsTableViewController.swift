@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TutorsTableViewController: UITableViewController, UISearchBarDelegate, DatabaseListener {
+class TutorsTableViewController: UITableViewController, UISearchResultsUpdating, DatabaseListener {
     
     weak var databaseController: DatabaseProtocol?
     var listenerType: ListenerType = .all
@@ -22,13 +22,18 @@ class TutorsTableViewController: UITableViewController, UISearchBarDelegate, Dat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        databaseController = appDelegate.databaseController
+        
+        filteredTutors = currentTutors
+        
         navigationController?.navigationBar.barTintColor = UIColor.systemTeal
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         
         let searchController = UISearchController(searchResultsController: nil)
-        searchController.searchBar.delegate = self
+        searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search tutors..."
+        searchController.searchBar.placeholder = "Search tutors by name..."
         searchController.searchBar.backgroundColor = UIColor.white
         navigationItem.searchController = searchController
         
@@ -80,12 +85,12 @@ class TutorsTableViewController: UITableViewController, UISearchBarDelegate, Dat
     }
     
     func onCourseListChange(change: DatabaseChange, listCourses: [Course]) {
-        //updateSearchResults(for: navigationItem.searchController!)
+        
     }
     
     func onTutorListChange(change: DatabaseChange, listTutors: [Tutor]) {
         currentTutors = listTutors
-        tableView.reloadData()
+        updateSearchResults(for: navigationItem.searchController!)
     }
 
     // MARK: - Table view data source
@@ -97,7 +102,7 @@ class TutorsTableViewController: UITableViewController, UISearchBarDelegate, Dat
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return currentTutors.count
+        return filteredTutors.count
     }
     
     // set height of cell
@@ -111,7 +116,7 @@ class TutorsTableViewController: UITableViewController, UISearchBarDelegate, Dat
         let tutorCell =
             tableView.dequeueReusableCell(withIdentifier: CELL_TUTOR, for: indexPath)
             as! TutorTableViewCell
-        let tutor = currentTutors[indexPath.row]
+        let tutor = filteredTutors[indexPath.row]
         
         tutorCell.tutorNameLabel.text = tutor.tutorName
         tutorCell.tutorIntroLabel.text = tutor.tutorIntro

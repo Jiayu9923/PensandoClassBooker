@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CoursesTableViewController: UITableViewController, UISearchBarDelegate, DatabaseListener{
+class CoursesTableViewController: UITableViewController, UISearchResultsUpdating, DatabaseListener{
     
     weak var databaseController: DatabaseProtocol?
     var listenerType: ListenerType = .all
@@ -25,14 +25,16 @@ class CoursesTableViewController: UITableViewController, UISearchBarDelegate, Da
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         databaseController = appDelegate.databaseController
         
+        filteredCourses = currentCourses
+        
         navigationController?.navigationBar.barTintColor = UIColor.systemTeal
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         
         
         let searchController = UISearchController(searchResultsController: nil)
-        searchController.searchBar.delegate = self
+        searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search courses..."
+        searchController.searchBar.placeholder = "Search courses by name..."
         searchController.searchBar.backgroundColor = UIColor.white
         navigationItem.searchController = searchController
         
@@ -75,7 +77,7 @@ class CoursesTableViewController: UITableViewController, UISearchBarDelegate, Da
                 guard let courseName = course.courseName else {
                     return false
                  }
-                  return courseName.lowercased().contains(searchText)
+                return courseName.lowercased().contains(searchText)
             })
         } else {
             filteredCourses = currentCourses
@@ -86,8 +88,7 @@ class CoursesTableViewController: UITableViewController, UISearchBarDelegate, Da
     
     func onCourseListChange(change: DatabaseChange, listCourses: [Course]) {
         currentCourses = listCourses
-        tableView.reloadData()
-        //updateSearchResults(for: navigationItem.searchController!)
+        updateSearchResults(for: navigationItem.searchController!)
     }
     
     func onTutorListChange(change: DatabaseChange, listTutors: [Tutor]) {
@@ -104,7 +105,7 @@ class CoursesTableViewController: UITableViewController, UISearchBarDelegate, Da
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return currentCourses.count
+        return filteredCourses.count
     }
     
     // set height of cell
@@ -117,7 +118,7 @@ class CoursesTableViewController: UITableViewController, UISearchBarDelegate, Da
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let courseCell =
             tableView.dequeueReusableCell(withIdentifier: CELL_COURSE, for: indexPath) as! CourseTableViewCell
-        let course = currentCourses[indexPath.row]
+        let course = filteredCourses[indexPath.row]
         
         courseCell.courseCodeLabel.text = course.courseCode
         courseCell.courseNameLabel.text = course.courseName

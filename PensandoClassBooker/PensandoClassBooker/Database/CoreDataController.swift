@@ -34,8 +34,8 @@ class CoreDataController: NSObject, NSFetchedResultsControllerDelegate, Database
             }
             
             if fetchAllTutors().count == 0{
-                createDefaultTutors()
-                print("get successfully")
+                createDefaultCourses()
+                print("add successfully")
             }
     }
     
@@ -56,7 +56,7 @@ class CoreDataController: NSObject, NSFetchedResultsControllerDelegate, Database
     }
     
     
-    func Course(courseCode: String, courseName: String, courseIntro: String, courseImage: String) -> Course {
+    func addCourse(courseCode: String, courseName: String, courseIntro: String, courseImage: String) -> Course {
         let course = NSEntityDescription.insertNewObject(forEntityName: "Course",
             into: persistentContainer.viewContext) as! Course
         course.courseName = courseName
@@ -68,7 +68,7 @@ class CoreDataController: NSObject, NSFetchedResultsControllerDelegate, Database
     }
     
     
-    func Tutor(tutorName: String, tutorIntro: String, tutorImage: String, gender: String, age: String) -> Tutor {
+    func addTutor(tutorName: String, tutorIntro: String, tutorImage: String, gender: String, age: String) -> Tutor {
         let tutor = NSEntityDescription.insertNewObject(forEntityName: "Tutor",
             into: persistentContainer.viewContext) as! Tutor
         tutor.tutorName = tutorName
@@ -86,7 +86,7 @@ class CoreDataController: NSObject, NSFetchedResultsControllerDelegate, Database
                 return false
             }
             
-            course.addToCourseTutor(Tutor(tutorName: tutorName, tutorIntro: tutorIntro, tutorImage: tutorImage, gender: gender, age: age))
+            course.addToCourseTutor(addTutor(tutorName: tutorName, tutorIntro: tutorIntro, tutorImage: tutorImage, gender: gender, age: age))
             return true
     }
     
@@ -181,19 +181,15 @@ class CoreDataController: NSObject, NSFetchedResultsControllerDelegate, Database
     
 
     func createDefaultCourses() {
-        let a = Course(courseCode: "FIT1023", courseName: "Fundamental of Python", courseIntro: "This course will teach you how to user Python.", courseImage: "Python")
-        _ = addTutorToCourse(course: a, tutorName: "Chloe", tutorIntro: "1111", tutorImage: "11", gender: "Female", age: "21")
+        let a = addCourse(courseCode: "FIT1023", courseName: "Fundamental of Python", courseIntro: "This course will teach you how to use Python.", courseImage: "Python")
+        _ = addTutorToCourse(course: a, tutorName: "Chloe", tutorIntro: "This units will teach you how to use python. And qwe ssdd ssd sddf sdw ffef dvdve wfef", tutorImage: "ChloeBrown", gender: "Female", age: "21")
+        _ = addTutorToCourse(course: a, tutorName: "Daisy", tutorIntro: "This units will teach you how to use pythong. And qwe ssdd ssd sddf sdw ffef dvdve wfef", tutorImage: "Anna", gender: "Female", age: "25")
         
-        let b = Course(courseCode: "FIT3133", courseName: "iOS Development", courseIntro: "This course will teach you how to develop an iOS application.", courseImage: "2100")
-        _ = addTutorToCourse(course: b, tutorName: "Emma", tutorIntro: "1111", tutorImage: "11", gender: "Female", age: "21")
+        let b = addCourse(courseCode: "FIT3133", courseName: "iOS Development", courseIntro: "This course will teach you how to develop an iOS application.", courseImage: "2100")
+        _ = addTutorToCourse(course: b, tutorName: "Emma", tutorIntro: "This units will teach you how to develop an iOS application. And qwe ssdd ssd sddf sdw ffef dvdve wfef.", tutorImage: "Emma", gender: "Female", age: "28")
         
-        let c = Course(courseCode: "FIT2100", courseName: "iOS Development", courseIntro: "This course will teach you how to develop an iOS application.", courseImage: "3155")
-        _ = addTutorToCourse(course: c, tutorName: "Emma", tutorIntro: "1111", tutorImage: "11", gender: "Female", age: "21")
+        let c = addCourse(courseCode: "FIT2100", courseName: "iOS Development", courseIntro: "This course will teach you how to develop an iOS application.", courseImage: "3156")
+        _ = addTutorToCourse(course: c, tutorName: "Anna", tutorIntro: "This units will teach you how to develop an iOS application. And qwe ssdd ssd sddf sdw ffef dvdve wfef.", tutorImage: "Anna", gender: "Female", age: "21")
     }
     
-    func createDefaultTutors() {
-        _ = Tutor(tutorName: "Chloe", tutorIntro: "This units will teach you how to use pythong. And qwe ssdd ssd sddf sdw ffef dvdve wfef.", tutorImage: "Emma", gender: "Female", age: "21")
-        
-        _ = Tutor(tutorName: "Anna", tutorIntro: "This units will teach you how to develop an iOS application. And qwe ssdd ssd sddf sdw ffef dvdve wfef.", tutorImage: "ChloeBrown", gender: "Male", age: "26")
-    }
 }

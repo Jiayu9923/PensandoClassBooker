@@ -125,13 +125,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="courseTutor" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWy-S5-qZ8">
+                                <rect key="frame" x="20" y="460" width="378" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6YE-Lz-41i" firstAttribute="top" secondItem="lwK-qg-Uqu" secondAttribute="bottom" constant="8" id="1gI-G4-4Aw"/>
                             <constraint firstItem="0Xn-Dm-tns" firstAttribute="trailing" secondItem="6YE-Lz-41i" secondAttribute="trailing" constant="16" id="2mY-hk-Org"/>
                             <constraint firstItem="lwK-qg-Uqu" firstAttribute="leading" secondItem="0Xn-Dm-tns" secondAttribute="leading" constant="16" id="3es-a5-fGQ"/>
+                            <constraint firstItem="SWy-S5-qZ8" firstAttribute="top" secondItem="ghe-iW-tzd" secondAttribute="bottom" constant="20" id="5Wt-1C-fr2"/>
                             <constraint firstItem="0Xn-Dm-tns" firstAttribute="trailing" secondItem="ghe-iW-tzd" secondAttribute="trailing" constant="20" id="6YR-Gf-NUB"/>
+                            <constraint firstItem="0Xn-Dm-tns" firstAttribute="trailing" secondItem="SWy-S5-qZ8" secondAttribute="trailing" constant="16" id="DUD-Zc-0Z9"/>
                             <constraint firstItem="0Xn-Dm-tns" firstAttribute="trailing" secondItem="oDi-7K-DhI" secondAttribute="trailing" constant="57" id="J4A-k0-jCB"/>
                             <constraint firstItem="lwK-qg-Uqu" firstAttribute="top" secondItem="oDi-7K-DhI" secondAttribute="bottom" constant="16" id="PH6-AJ-0gc"/>
                             <constraint firstItem="0Xn-Dm-tns" firstAttribute="trailing" secondItem="lwK-qg-Uqu" secondAttribute="trailing" constant="16" id="X8S-eF-o1l"/>
@@ -140,6 +148,7 @@
                             <constraint firstItem="6YE-Lz-41i" firstAttribute="leading" secondItem="0Xn-Dm-tns" secondAttribute="leading" constant="16" id="mt5-Cr-FJM"/>
                             <constraint firstItem="ghe-iW-tzd" firstAttribute="top" secondItem="6YE-Lz-41i" secondAttribute="bottom" constant="30" id="ntP-d0-ir0"/>
                             <constraint firstItem="oDi-7K-DhI" firstAttribute="top" secondItem="0Xn-Dm-tns" secondAttribute="top" constant="20" id="taf-A5-rPd"/>
+                            <constraint firstItem="SWy-S5-qZ8" firstAttribute="leading" secondItem="0Xn-Dm-tns" secondAttribute="leading" constant="20" id="zC2-zC-vGJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Xn-Dm-tns"/>
                     </view>
@@ -155,6 +164,7 @@
                         <outlet property="courseImageView" destination="oDi-7K-DhI" id="qEI-9j-ZFK"/>
                         <outlet property="courseIntroLabel" destination="ghe-iW-tzd" id="CF2-PN-yfb"/>
                         <outlet property="courseNameLabel" destination="6YE-Lz-41i" id="zjL-Lb-Tvz"/>
+                        <outlet property="courseTutorLabel" destination="SWy-S5-qZ8" id="liS-aO-61k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9uJ-Qm-rOq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -331,7 +341,7 @@
                         <viewLayoutGuide key="safeArea" id="3Fa-rW-h26"/>
                     </view>
                     <navigationItem key="navigationItem" title="courseCode" id="5fu-zb-xxH">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="edit" id="3YM-Yd-Nfc"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="3YM-Yd-Nfc"/>
                     </navigationItem>
                     <connections>
                         <outlet property="classImageView" destination="4q3-6g-XEs" id="gfn-aY-vkU"/>
@@ -378,14 +388,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="courseCode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68b-iD-QLZ">
-                                <rect key="frame" x="16" y="104" width="382" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="courseCode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68b-iD-QLZ">
+                                <rect key="frame" x="16" y="104" width="115" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="courseName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLg-bg-UFj">
-                                <rect key="frame" x="16" y="136" width="382" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="courseName" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLg-bg-UFj">
+                                <rect key="frame" x="159" y="106" width="97.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -393,16 +403,21 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="lLg-bg-UFj" firstAttribute="top" secondItem="68b-iD-QLZ" secondAttribute="bottom" constant="8" id="7RU-Mh-JSZ"/>
-                            <constraint firstItem="xyt-S3-l5I" firstAttribute="trailing" secondItem="68b-iD-QLZ" secondAttribute="trailing" constant="16" id="EB6-eQ-P4D"/>
+                            <constraint firstItem="lLg-bg-UFj" firstAttribute="leading" secondItem="68b-iD-QLZ" secondAttribute="trailing" constant="8" id="0wZ-45-MCW"/>
+                            <constraint firstItem="xyt-S3-l5I" firstAttribute="trailing" secondItem="lLg-bg-UFj" secondAttribute="trailing" constant="8" id="9fE-42-PB2"/>
                             <constraint firstItem="68b-iD-QLZ" firstAttribute="top" secondItem="xyt-S3-l5I" secondAttribute="top" constant="16" id="Jx8-uN-owh"/>
                             <constraint firstItem="68b-iD-QLZ" firstAttribute="leading" secondItem="xyt-S3-l5I" secondAttribute="leading" constant="16" id="RIl-I7-8Yp"/>
-                            <constraint firstItem="xyt-S3-l5I" firstAttribute="trailing" secondItem="lLg-bg-UFj" secondAttribute="trailing" constant="16" id="RdO-zp-ENX"/>
-                            <constraint firstItem="lLg-bg-UFj" firstAttribute="leading" secondItem="xyt-S3-l5I" secondAttribute="leading" constant="16" id="c7C-WD-gHk"/>
+                            <constraint firstItem="lLg-bg-UFj" firstAttribute="top" secondItem="xyt-S3-l5I" secondAttribute="top" constant="18" id="rkn-qq-ckI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xyt-S3-l5I"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Select Date" id="KHJ-HM-l2D"/>
+                    <navigationItem key="navigationItem" title="Select Date" id="KHJ-HM-l2D">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="nYf-l7-lW1">
+                            <connections>
+                                <segue destination="BEA-vp-zuz" kind="show" id="4ta-tu-OXr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="courseCodeLabel" destination="68b-iD-QLZ" id="Lmu-BW-663"/>
                         <outlet property="courseNameLabel" destination="lLg-bg-UFj" id="82B-vZ-myz"/>
@@ -411,6 +426,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHt-uR-2jk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2279.7101449275365" y="2308.2589285714284"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Zdl-Pq-yBO">
+            <objects>
+                <tableViewController id="BEA-vp-zuz" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fzj-Vt-UR2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="j35-Nv-35d">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j35-Nv-35d" id="Cpv-Z2-Uhv">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BEA-vp-zuz" id="jMF-sj-aah"/>
+                            <outlet property="delegate" destination="BEA-vp-zuz" id="QF1-fk-9aL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="mAe-wb-ZnE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="urA-8z-maH">
+                            <connections>
+                                <segue destination="NQ5-oD-hUd" kind="show" id="M9m-Tl-vw0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kjt-aj-Xwt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3309" y="2308"/>
         </scene>
         <!--Tutors-->
         <scene sceneID="pqT-Xw-7yb">
@@ -583,7 +633,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4J-4x-zlH">
                                                     <rect key="frame" x="115" y="50" width="244" height="24"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -595,7 +645,6 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="N4J-4x-zlH" secondAttribute="trailing" constant="16" id="zzk-gS-gW2"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="0.80529269366197187" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="userImageView" destination="mdg-PM-Wz2" id="X59-sp-kGX"/>
                                             <outlet property="userNameLabel" destination="N4J-4x-zlH" id="7fQ-l4-odP"/>
@@ -614,7 +663,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ve-Cu-AaI">
-                                                    <rect key="frame" x="20" y="11" width="334" height="22"/>
+                                                    <rect key="frame" x="20" y="11" width="347" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -622,8 +671,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="0ve-Cu-AaI" firstAttribute="top" secondItem="dmc-iN-dbu" secondAttribute="top" constant="11" id="75q-fH-VOd"/>
-                                                <constraint firstItem="0ve-Cu-AaI" firstAttribute="leading" secondItem="dmc-iN-dbu" secondAttribute="leading" constant="20" id="j39-a2-kdR"/>
-                                                <constraint firstAttribute="trailing" secondItem="0ve-Cu-AaI" secondAttribute="trailing" constant="29" id="yCg-S0-MzO"/>
+                                                <constraint firstAttribute="trailing" secondItem="0ve-Cu-AaI" secondAttribute="trailing" constant="16" id="T0P-J7-FbJ"/>
+                                                <constraint firstItem="0ve-Cu-AaI" firstAttribute="leading" secondItem="dmc-iN-dbu" secondAttribute="leading" constant="20" id="bOb-wm-Nfp"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -852,7 +901,7 @@
                         <viewLayoutGuide key="safeArea" id="mZ3-aT-pHI"/>
                     </view>
                     <navigationItem key="navigationItem" title="Log In" id="KpJ-3J-NJL">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="dqm-MW-rf9">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="dqm-MW-rf9">
                             <connections>
                                 <segue destination="q2f-1T-p7h" kind="show" id="x90-dl-ZhR"/>
                             </connections>
@@ -1002,7 +1051,7 @@
                         <viewLayoutGuide key="safeArea" id="nqq-Zy-hM6"/>
                     </view>
                     <navigationItem key="navigationItem" title="Registration" id="lTA-iS-lMf">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="Bmw-Zh-9gN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Bmw-Zh-9gN">
                             <connections>
                                 <segue destination="q2f-1T-p7h" kind="show" id="qxx-aT-q0I"/>
                             </connections>
@@ -1015,7 +1064,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qxx-aT-q0I"/>
+        <segue reference="M9m-Tl-vw0"/>
+        <segue reference="WoG-eA-8RH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="courses" width="23" height="23"/>

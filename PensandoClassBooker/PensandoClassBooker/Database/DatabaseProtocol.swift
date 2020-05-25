@@ -32,8 +32,8 @@ protocol DatabaseProtocol: AnyObject {
     //var defaultTeam: Team {get}
     
     func cleanup()
-    func Course(courseCode: String, courseName: String, courseIntro: String, courseImage: String) -> Course
-    func Tutor(tutorName: String, tutorIntro: String, tutorImage: String, gender: String, age: String) -> Tutor
+    func addCourse(courseCode: String, courseName: String, courseIntro: String, courseImage: String) -> Course
+    func addTutor(tutorName: String, tutorIntro: String, tutorImage: String, gender: String, age: String) -> Tutor
     func addTutorToCourse(course: Course, tutorName: String, tutorIntro: String, tutorImage: String, gender: String, age: String) -> Bool
     func addListener(listener: DatabaseListener)
     func removeListener(listener: DatabaseListener)
