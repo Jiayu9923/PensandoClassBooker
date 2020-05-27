@@ -10,13 +10,16 @@ import UIKit
 
 class MyClassTableViewController: UITableViewController {
     
+    var classes: Classes?
+    var upcomingClass: [Classes] = []
+    var pastClass: [Classes] = []
     let SECTION_CLASS = 0
     let CELL_CLASS = "classCell"
-    
-    //var currentClasses: [Class] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        createDefaultClasses()
         
         navigationController?.navigationBar.barTintColor = UIColor.systemTeal
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
@@ -38,23 +41,41 @@ class MyClassTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         //return currentClasses.count
-        return 1
+        return upcomingClass.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+        
+        let classCell =
+            tableView.dequeueReusableCell(withIdentifier: CELL_CLASS, for: indexPath) as! ClassTableViewCell
+        let classes = upcomingClass[indexPath.row]
 
-        // Configure the cell...
+        classCell.courseCodeLabel.text = classes.code
+        classCell.courseNameLabel.text = classes.name
+        classCell.courseImageView.image = UIImage(named: classes.image)!
+        classCell.classTimeLabel.text = dateFormatter.string(from: classes.time as Date)
 
-        return cell
+        return classCell
     }
-    */
+    
 
     // set height of cell
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return 100
+    }
+    
+    func createDefaultClasses() {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+        
+        upcomingClass.append(Classes(code: "FIT1023", name: "Fundamental of Python", image: "Python", tutor: "Chloe", address: "1 Mallee Court", time: dateFormatter.date(from: "30/05/2020 12:00")!))
+        upcomingClass.append(Classes(code: "FIT1023", name: "Fundamental of Python", image: "Python", tutor: "Chloe", address: "1 Mallee Court", time: dateFormatter.date(from: "28/05/2020 15:00")!))
     }
 
     /*
@@ -84,14 +105,18 @@ class MyClassTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "classSegue" {
+            let destination = segue.destination as! ClassDetailViewController
+            let selectedIndexPath = tableView.indexPathsForSelectedRows?.first
+            destination.classes = upcomingClass[selectedIndexPath!.row]
+        }
+
     }
-    */
+    
 
 }

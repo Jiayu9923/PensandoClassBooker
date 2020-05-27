@@ -11,6 +11,7 @@ import UIKit
 class CourseDetailViewController: UIViewController {
     
     var course: Course?
+    
 
     @IBOutlet weak var courseCodeLabel: UILabel!
     @IBOutlet weak var courseImageView: UIImageView!
@@ -49,7 +50,7 @@ class CourseDetailViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "bookCourseSegue" {
-            let destination = segue.destination as! SelectDateViewController
+            let destination = segue.destination as! AddClassViewController
             destination.course = self.course
         }
     }

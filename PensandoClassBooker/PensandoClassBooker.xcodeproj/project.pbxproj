@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		07A8DD59BD051949379E88C0 /* Pods_PensandoClassBooker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02268F4F605127EFBC4C7946 /* Pods_PensandoClassBooker.framework */; };
 		E9548894247CF3C300DA22E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9548893247CF3C300DA22E9 /* GoogleService-Info.plist */; };
+		E95BE406247E739300F134F0 /* LoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BE405247E739300F134F0 /* LoginSignupViewController.swift */; };
+		E95BE40A247EB68200F134F0 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BE409247EB68200F134F0 /* Classes.swift */; };
 		E97A598E247425AB002CAB6B /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97A598D247425AB002CAB6B /* CoursesTableViewController.swift */; };
 		E97A5990247425B6002CAB6B /* TutorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97A598F247425B6002CAB6B /* TutorsTableViewController.swift */; };
 		E97A5994247433C8002CAB6B /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97A5993247433C8002CAB6B /* ProfileTableViewController.swift */; };
@@ -31,12 +33,10 @@
 		E9AFBBA524767CD40014C581 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AFBBA424767CD40014C581 /* CourseTableViewCell.swift */; };
 		E9D7FCFE2473A86F00053922 /* MyClassesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7FCFD2473A86F00053922 /* MyClassesTableViewController.swift */; };
 		E9E2EC0324790ECD00302537 /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2EC0224790ECD00302537 /* CourseDetailViewController.swift */; };
-		E9E2EC052479124200302537 /* SelectDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2EC042479124200302537 /* SelectDateViewController.swift */; };
+		E9E2EC052479124200302537 /* AddClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2EC042479124200302537 /* AddClassViewController.swift */; };
 		E9E2EC0724793E6300302537 /* TutorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2EC0624793E6300302537 /* TutorDetailViewController.swift */; };
 		E9E2EC0A24795F5A00302537 /* ClassDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2EC0924795F5A00302537 /* ClassDetailViewController.swift */; };
 		E9E2EC0C24796CA500302537 /* ClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2EC0B24796CA500302537 /* ClassTableViewCell.swift */; };
-		E9E2EC0E247970A800302537 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2EC0D247970A800302537 /* LogInViewController.swift */; };
-		E9E2EC10247970B600302537 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2EC0F247970B600302537 /* SignUpViewController.swift */; };
 		E9E2EC122479719200302537 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2EC112479719200302537 /* UserTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +45,10 @@
 		87EE72A89491A3AD68454A73 /* Pods-PensandoClassBooker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PensandoClassBooker.debug.xcconfig"; path = "Target Support Files/Pods-PensandoClassBooker/Pods-PensandoClassBooker.debug.xcconfig"; sourceTree = "<group>"; };
 		E2C7837A785C5849DF17CE52 /* Pods-PensandoClassBooker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PensandoClassBooker.release.xcconfig"; path = "Target Support Files/Pods-PensandoClassBooker/Pods-PensandoClassBooker.release.xcconfig"; sourceTree = "<group>"; };
 		E9548893247CF3C300DA22E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E95BE401247E538500F134F0 /* PensandoClassBookerDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PensandoClassBookerDebug.entitlements; sourceTree = "<group>"; };
+		E95BE402247E538F00F134F0 /* PensandoClassBooker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PensandoClassBooker.entitlements; sourceTree = "<group>"; };
+		E95BE405247E739300F134F0 /* LoginSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupViewController.swift; sourceTree = "<group>"; };
+		E95BE409247EB68200F134F0 /* Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
 		E97A598D247425AB002CAB6B /* CoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
 		E97A598F247425B6002CAB6B /* TutorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorsTableViewController.swift; sourceTree = "<group>"; };
 		E97A5993247433C8002CAB6B /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
@@ -69,12 +73,10 @@
 		E9AFBBA424767CD40014C581 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
 		E9D7FCFD2473A86F00053922 /* MyClassesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClassesTableViewController.swift; sourceTree = "<group>"; };
 		E9E2EC0224790ECD00302537 /* CourseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailViewController.swift; sourceTree = "<group>"; };
-		E9E2EC042479124200302537 /* SelectDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateViewController.swift; sourceTree = "<group>"; };
+		E9E2EC042479124200302537 /* AddClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClassViewController.swift; sourceTree = "<group>"; };
 		E9E2EC0624793E6300302537 /* TutorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorDetailViewController.swift; sourceTree = "<group>"; };
 		E9E2EC0924795F5A00302537 /* ClassDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDetailViewController.swift; sourceTree = "<group>"; };
 		E9E2EC0B24796CA500302537 /* ClassTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTableViewCell.swift; sourceTree = "<group>"; };
-		E9E2EC0D247970A800302537 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
-		E9E2EC0F247970B600302537 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E9E2EC112479719200302537 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,7 +106,6 @@
 				87EE72A89491A3AD68454A73 /* Pods-PensandoClassBooker.debug.xcconfig */,
 				E2C7837A785C5849DF17CE52 /* Pods-PensandoClassBooker.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -151,6 +152,8 @@
 		E9ADF73424718DB0004E577E /* PensandoClassBooker */ = {
 			isa = PBXGroup;
 			children = (
+				E95BE402247E538F00F134F0 /* PensandoClassBooker.entitlements */,
+				E95BE401247E538500F134F0 /* PensandoClassBookerDebug.entitlements */,
 				E9992FCF247AAB7B00D59BAE /* Database */,
 				E9992FBB247AA86900D59BAE /* DataModel */,
 				E9AFBBA3247679FB0014C581 /* Cell */,
@@ -162,16 +165,16 @@
 				E9ADF74024718DB2004E577E /* LaunchScreen.storyboard */,
 				E9ADF74324718DB2004E577E /* Info.plist */,
 				E9548893247CF3C300DA22E9 /* GoogleService-Info.plist */,
+				E95BE409247EB68200F134F0 /* Classes.swift */,
+				E95BE405247E739300F134F0 /* LoginSignupViewController.swift */,
 				E97A598D247425AB002CAB6B /* CoursesTableViewController.swift */,
 				E97A598F247425B6002CAB6B /* TutorsTableViewController.swift */,
 				E9D7FCFD2473A86F00053922 /* MyClassesTableViewController.swift */,
 				E97A5993247433C8002CAB6B /* ProfileTableViewController.swift */,
 				E9E2EC0224790ECD00302537 /* CourseDetailViewController.swift */,
 				E9E2EC0624793E6300302537 /* TutorDetailViewController.swift */,
-				E9E2EC042479124200302537 /* SelectDateViewController.swift */,
+				E9E2EC042479124200302537 /* AddClassViewController.swift */,
 				E9E2EC0924795F5A00302537 /* ClassDetailViewController.swift */,
-				E9E2EC0D247970A800302537 /* LogInViewController.swift */,
-				E9E2EC0F247970B600302537 /* SignUpViewController.swift */,
 				E9992FB9247A73B800D59BAE /* ClassMapViewController.swift */,
 			);
 			path = PensandoClassBooker;
@@ -304,12 +307,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9E2EC052479124200302537 /* SelectDateViewController.swift in Sources */,
+				E9E2EC052479124200302537 /* AddClassViewController.swift in Sources */,
 				E9AFBB9A24763A030014C581 /* TutorTableViewCell.swift in Sources */,
 				E9ADF73A24718DB0004E577E /* ViewController.swift in Sources */,
-				E9E2EC0E247970A800302537 /* LogInViewController.swift in Sources */,
 				E9ADF73624718DB0004E577E /* AppDelegate.swift in Sources */,
-				E9E2EC10247970B600302537 /* SignUpViewController.swift in Sources */,
 				E9AFBBA524767CD40014C581 /* CourseTableViewCell.swift in Sources */,
 				E9992FD5247AADDF00D59BAE /* CoreDataController.swift in Sources */,
 				E999302A247AE2FE00D59BAE /* Tutor+CoreDataClass.swift in Sources */,
@@ -317,10 +318,12 @@
 				E999302B247AE2FE00D59BAE /* Tutor+CoreDataProperties.swift in Sources */,
 				E9ADF73824718DB0004E577E /* SceneDelegate.swift in Sources */,
 				E999302D247AE2FE00D59BAE /* Course+CoreDataProperties.swift in Sources */,
+				E95BE406247E739300F134F0 /* LoginSignupViewController.swift in Sources */,
 				E97A598E247425AB002CAB6B /* CoursesTableViewController.swift in Sources */,
 				E9E2EC0724793E6300302537 /* TutorDetailViewController.swift in Sources */,
 				E9992FBE247AA8C200D59BAE /* CourseTutor.xcdatamodeld in Sources */,
 				E9992FBA247A73B800D59BAE /* ClassMapViewController.swift in Sources */,
+				E95BE40A247EB68200F134F0 /* Classes.swift in Sources */,
 				E9E2EC122479719200302537 /* UserTableViewCell.swift in Sources */,
 				E9E2EC0A24795F5A00302537 /* ClassDetailViewController.swift in Sources */,
 				E9E2EC0324790ECD00302537 /* CourseDetailViewController.swift in Sources */,
@@ -474,6 +477,7 @@
 			baseConfigurationReference = 87EE72A89491A3AD68454A73 /* Pods-PensandoClassBooker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PensandoClassBooker/PensandoClassBookerDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F9KGVMXYFQ;
 				INFOPLIST_FILE = PensandoClassBooker/Info.plist;
@@ -493,6 +497,7 @@
 			baseConfigurationReference = E2C7837A785C5849DF17CE52 /* Pods-PensandoClassBooker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PensandoClassBooker/PensandoClassBooker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F9KGVMXYFQ;
 				INFOPLIST_FILE = PensandoClassBooker/Info.plist;

@@ -1,0 +1,174 @@
+
+/* Class = "UILabel"; text = "Personal Information"; ObjectID = "0ve-Cu-AaI"; */
+"0ve-Cu-AaI.text" = "Personal Information";
+
+/* Class = "UILabel"; text = "tutorIntro"; ObjectID = "1mW-Ny-M5M"; */
+"1mW-Ny-M5M.text" = "tutorIntro";
+
+/* Class = "UITabBarItem"; title = "Courses"; ObjectID = "2hn-e4-crY"; */
+"2hn-e4-crY.title" = "Courses";
+
+/* Class = "UILabel"; text = "courseCode"; ObjectID = "3Zz-vh-HLt"; */
+"3Zz-vh-HLt.text" = "courseCode";
+
+/* Class = "UINavigationItem"; title = "courseCode"; ObjectID = "5fu-zb-xxH"; */
+"5fu-zb-xxH.title" = "courseCode";
+
+/* Class = "UILabel"; text = "courseCode"; ObjectID = "68b-iD-QLZ"; */
+"68b-iD-QLZ.text" = "courseCode";
+
+/* Class = "UILabel"; text = "courseName"; ObjectID = "6YE-Lz-41i"; */
+"6YE-Lz-41i.text" = "courseName";
+
+/* Class = "UITextField"; placeholder = "Email..."; ObjectID = "6YG-Ea-BB0"; */
+"6YG-Ea-BB0.placeholder" = "Email...";
+
+/* Class = "UILabel"; text = "tutorName"; ObjectID = "7Z4-Xj-qLv"; */
+"7Z4-Xj-qLv.text" = "tutorName";
+
+/* Class = "UILabel"; text = "tutorIntro"; ObjectID = "89U-4x-mjV"; */
+"89U-4x-mjV.text" = "tutorIntro";
+
+/* Class = "UITextField"; placeholder = "Password..."; ObjectID = "8uP-zx-InW"; */
+"8uP-zx-InW.placeholder" = "Password...";
+
+/* Class = "UILabel"; text = "My Chat"; ObjectID = "9Yc-4Z-af8"; */
+"9Yc-4Z-af8.text" = "My Chat";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "AJ2-oo-MQH"; */
+"AJ2-oo-MQH.normalTitle" = "Login";
+
+/* Class = "UILabel"; text = "age"; ObjectID = "AuO-ie-Oqm"; */
+"AuO-ie-Oqm.text" = "age";
+
+/* Class = "UILabel"; text = "About this App"; ObjectID = "B20-pf-ihm"; */
+"B20-pf-ihm.text" = "About this App";
+
+/* Class = "UILabel"; text = "Pensando"; ObjectID = "CZp-e1-lTA"; */
+"CZp-e1-lTA.text" = "Pensando";
+
+/* Class = "UILabel"; text = "Timetable"; ObjectID = "CaZ-Ji-hm6"; */
+"CaZ-Ji-hm6.text" = "Timetable";
+
+/* Class = "UILabel"; text = "courseCode"; ObjectID = "ExE-fX-ydE"; */
+"ExE-fX-ydE.text" = "courseCode";
+
+/* Class = "UILabel"; text = "Forum"; ObjectID = "IKu-QA-fvI"; */
+"IKu-QA-fvI.text" = "Forum";
+
+/* Class = "UILabel"; text = "Setting"; ObjectID = "IXR-gL-NWr"; */
+"IXR-gL-NWr.text" = "Setting";
+
+/* Class = "UINavigationItem"; title = "Profile"; ObjectID = "JFS-9s-zHp"; */
+"JFS-9s-zHp.title" = "Profile";
+
+/* Class = "UINavigationItem"; title = "Select Date"; ObjectID = "KHJ-HM-l2D"; */
+"KHJ-HM-l2D.title" = "Select Date";
+
+/* Class = "UILabel"; text = "courseCode"; ObjectID = "M2l-0J-wnR"; */
+"M2l-0J-wnR.text" = "courseCode";
+
+/* Class = "UILabel"; text = "courseName"; ObjectID = "MFg-7s-itK"; */
+"MFg-7s-itK.text" = "courseName";
+
+/* Class = "UILabel"; text = "userName"; ObjectID = "N4J-4x-zlH"; */
+"N4J-4x-zlH.text" = "userName";
+
+/* Class = "UILabel"; text = "timeLabel"; ObjectID = "OM2-b8-i05"; */
+"OM2-b8-i05.text" = "timeLabel";
+
+/* Class = "UINavigationItem"; title = "Courses"; ObjectID = "Onn-0A-9Ao"; */
+"Onn-0A-9Ao.title" = "Courses";
+
+/* Class = "UINavigationItem"; title = "tutorName"; ObjectID = "Qlq-gy-NWU"; */
+"Qlq-gy-NWU.title" = "tutorName";
+
+/* Class = "UILabel"; text = "courseTutor"; ObjectID = "SWy-S5-qZ8"; */
+"SWy-S5-qZ8.text" = "courseTutor";
+
+/* Class = "UITabBarItem"; title = "Tutors"; ObjectID = "TwN-ri-YdR"; */
+"TwN-ri-YdR.title" = "Tutors";
+
+/* Class = "UILabel"; text = "tutorName"; ObjectID = "Wbo-w3-AUn"; */
+"Wbo-w3-AUn.text" = "tutorName";
+
+/* Class = "UILabel"; text = "courseName"; ObjectID = "Ws5-4w-CBw"; */
+"Ws5-4w-CBw.text" = "courseName";
+
+/* Class = "UINavigationItem"; title = "Tutors"; ObjectID = "X0b-IA-3Gb"; */
+"X0b-IA-3Gb.title" = "Tutors";
+
+/* Class = "UITabBarItem"; title = "Tutors"; ObjectID = "YBn-xB-ZXA"; */
+"YBn-xB-ZXA.title" = "Tutors";
+
+/* Class = "UILabel"; text = "classTime"; ObjectID = "Yuf-bp-X6l"; */
+"Yuf-bp-X6l.text" = "classTime";
+
+/* Class = "UITabBarItem"; title = "My Classes"; ObjectID = "axs-pl-jXB"; */
+"axs-pl-jXB.title" = "My Classes";
+
+/* Class = "UINavigationItem"; title = "My Classes"; ObjectID = "bjs-dP-ody"; */
+"bjs-dP-ody.title" = "My Classes";
+
+/* Class = "UIButton"; normalTitle = "Map"; ObjectID = "dyc-DC-wDg"; */
+"dyc-DC-wDg.normalTitle" = "Map";
+
+/* Class = "UILabel"; text = "tutorLabel"; ObjectID = "f18-WK-m2F"; */
+"f18-WK-m2F.text" = "tutorLabel";
+
+/* Class = "UILabel"; text = "User's Guidance"; ObjectID = "fsn-C7-PG3"; */
+"fsn-C7-PG3.text" = "User's Guidance";
+
+/* Class = "UILabel"; text = "gender"; ObjectID = "fxb-5V-Qez"; */
+"fxb-5V-Qez.text" = "gender";
+
+/* Class = "UITableViewSection"; headerTitle = "About"; ObjectID = "gR9-ng-946"; */
+"gR9-ng-946.headerTitle" = "About";
+
+/* Class = "UILabel"; text = "courseIntro"; ObjectID = "ghe-iW-tzd"; */
+"ghe-iW-tzd.text" = "courseIntro";
+
+/* Class = "UILabel"; text = "My Contacts"; ObjectID = "grH-nD-jtq"; */
+"grH-nD-jtq.text" = "My Contacts";
+
+/* Class = "UITabBarItem"; title = "My Classes"; ObjectID = "hxE-x5-CJg"; */
+"hxE-x5-CJg.title" = "My Classes";
+
+/* Class = "UITableViewSection"; headerTitle = "My Features"; ObjectID = "j3F-pI-8tp"; */
+"j3F-pI-8tp.headerTitle" = "My Features";
+
+/* Class = "UILabel"; text = "courseName"; ObjectID = "lLg-bg-UFj"; */
+"lLg-bg-UFj.text" = "courseName";
+
+/* Class = "UISegmentedControl"; lYT-oC-7W8.segmentTitles[0] = "Upcoming"; ObjectID = "lYT-oC-7W8"; */
+"lYT-oC-7W8.segmentTitles[0]" = "Upcoming";
+
+/* Class = "UISegmentedControl"; lYT-oC-7W8.segmentTitles[1] = "Past Classes"; ObjectID = "lYT-oC-7W8"; */
+"lYT-oC-7W8.segmentTitles[1]" = "Past Classes";
+
+/* Class = "UILabel"; text = "courseCode"; ObjectID = "lwK-qg-Uqu"; */
+"lwK-qg-Uqu.text" = "courseCode";
+
+/* Class = "UINavigationItem"; title = "Address"; ObjectID = "mPC-Pd-Smk"; */
+"mPC-Pd-Smk.title" = "Address";
+
+/* Class = "UITabBarItem"; title = "Courses"; ObjectID = "mS3-iU-woT"; */
+"mS3-iU-woT.title" = "Courses";
+
+/* Class = "UINavigationItem"; title = "courseCode"; ObjectID = "mbg-N4-y7p"; */
+"mbg-N4-y7p.title" = "courseCode";
+
+/* Class = "UIBarButtonItem"; title = "Next"; ObjectID = "nYf-l7-lW1"; */
+"nYf-l7-lW1.title" = "Next";
+
+/* Class = "UIButton"; normalTitle = "Sign up"; ObjectID = "t9C-sA-tP6"; */
+"t9C-sA-tP6.normalTitle" = "Sign up";
+
+/* Class = "UILabel"; text = "courseName"; ObjectID = "tpF-J9-99I"; */
+"tpF-J9-99I.text" = "courseName";
+
+/* Class = "UITabBarItem"; title = "Me"; ObjectID = "uiq-LX-dxS"; */
+"uiq-LX-dxS.title" = "Me";
+
+/* Class = "UITabBarItem"; title = "Me"; ObjectID = "ykc-y9-Yx3"; */
+"ykc-y9-Yx3.title" = "Me";

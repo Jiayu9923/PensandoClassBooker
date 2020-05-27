@@ -9,6 +9,8 @@
 import UIKit
 
 class ClassDetailViewController: UIViewController {
+    
+    var classes: Classes?
 
     @IBOutlet weak var courseImageView: UIImageView!
     @IBOutlet weak var courseCodeLabel: UILabel!
@@ -24,6 +26,21 @@ class ClassDetailViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
 
         // Do any additional setup after loading the view.
+        self.navigationItem.title = classes!.code
+        
+        guard let classes = classes else {
+        return
+        }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+        
+        courseImageView.image = UIImage(named: classes.image)
+        courseCodeLabel.text = classes.code
+        courseNameLabel.text = classes.name
+        classTimeLabel.text = dateFormatter.string(from: classes.time as Date)
+        classTutorLabel.text = "Tutors: \(classes.tutor)"
+        
     }
     
 
