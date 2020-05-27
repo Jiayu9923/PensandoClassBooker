@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07A8DD59BD051949379E88C0 /* Pods_PensandoClassBooker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02268F4F605127EFBC4C7946 /* Pods_PensandoClassBooker.framework */; };
+		E9548894247CF3C300DA22E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9548893247CF3C300DA22E9 /* GoogleService-Info.plist */; };
 		E97A598E247425AB002CAB6B /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97A598D247425AB002CAB6B /* CoursesTableViewController.swift */; };
 		E97A5990247425B6002CAB6B /* TutorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97A598F247425B6002CAB6B /* TutorsTableViewController.swift */; };
 		E97A5994247433C8002CAB6B /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97A5993247433C8002CAB6B /* ProfileTableViewController.swift */; };
@@ -39,6 +41,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02268F4F605127EFBC4C7946 /* Pods_PensandoClassBooker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PensandoClassBooker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87EE72A89491A3AD68454A73 /* Pods-PensandoClassBooker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PensandoClassBooker.debug.xcconfig"; path = "Target Support Files/Pods-PensandoClassBooker/Pods-PensandoClassBooker.debug.xcconfig"; sourceTree = "<group>"; };
+		E2C7837A785C5849DF17CE52 /* Pods-PensandoClassBooker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PensandoClassBooker.release.xcconfig"; path = "Target Support Files/Pods-PensandoClassBooker/Pods-PensandoClassBooker.release.xcconfig"; sourceTree = "<group>"; };
+		E9548893247CF3C300DA22E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E97A598D247425AB002CAB6B /* CoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
 		E97A598F247425B6002CAB6B /* TutorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorsTableViewController.swift; sourceTree = "<group>"; };
 		E97A5993247433C8002CAB6B /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
@@ -77,12 +83,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07A8DD59BD051949379E88C0 /* Pods_PensandoClassBooker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24F62046C8863410490A2928 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02268F4F605127EFBC4C7946 /* Pods_PensandoClassBooker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9EDA9C6D08DA6A2EBEF219B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87EE72A89491A3AD68454A73 /* Pods-PensandoClassBooker.debug.xcconfig */,
+				E2C7837A785C5849DF17CE52 /* Pods-PensandoClassBooker.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E9992FBB247AA86900D59BAE /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +135,8 @@
 			children = (
 				E9ADF73424718DB0004E577E /* PensandoClassBooker */,
 				E9ADF73324718DB0004E577E /* Products */,
+				9EDA9C6D08DA6A2EBEF219B2 /* Pods */,
+				24F62046C8863410490A2928 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +161,7 @@
 				E9ADF73E24718DB2004E577E /* Assets.xcassets */,
 				E9ADF74024718DB2004E577E /* LaunchScreen.storyboard */,
 				E9ADF74324718DB2004E577E /* Info.plist */,
+				E9548893247CF3C300DA22E9 /* GoogleService-Info.plist */,
 				E97A598D247425AB002CAB6B /* CoursesTableViewController.swift */,
 				E97A598F247425B6002CAB6B /* TutorsTableViewController.swift */,
 				E9D7FCFD2473A86F00053922 /* MyClassesTableViewController.swift */,
@@ -167,9 +195,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9ADF74624718DB2004E577E /* Build configuration list for PBXNativeTarget "PensandoClassBooker" */;
 			buildPhases = (
+				4F09CF2DCD25BCE1E325485C /* [CP] Check Pods Manifest.lock */,
 				E9ADF72E24718DB0004E577E /* Sources */,
 				E9ADF72F24718DB0004E577E /* Frameworks */,
 				E9ADF73024718DB0004E577E /* Resources */,
+				995EE9432ACDEDDB85625405 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -219,12 +249,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9ADF74224718DB2004E577E /* LaunchScreen.storyboard in Resources */,
+				E9548894247CF3C300DA22E9 /* GoogleService-Info.plist in Resources */,
 				E9ADF73F24718DB2004E577E /* Assets.xcassets in Resources */,
 				E9ADF73D24718DB0004E577E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F09CF2DCD25BCE1E325485C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PensandoClassBooker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		995EE9432ACDEDDB85625405 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PensandoClassBooker/Pods-PensandoClassBooker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PensandoClassBooker/Pods-PensandoClassBooker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PensandoClassBooker/Pods-PensandoClassBooker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E9ADF72E24718DB0004E577E /* Sources */ = {
@@ -398,6 +471,7 @@
 		};
 		E9ADF74724718DB2004E577E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87EE72A89491A3AD68454A73 /* Pods-PensandoClassBooker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -416,6 +490,7 @@
 		};
 		E9ADF74824718DB2004E577E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2C7837A785C5849DF17CE52 /* Pods-PensandoClassBooker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -340,9 +340,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Fa-rW-h26"/>
                     </view>
-                    <navigationItem key="navigationItem" title="courseCode" id="5fu-zb-xxH">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="3YM-Yd-Nfc"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="courseCode" id="5fu-zb-xxH"/>
                     <connections>
                         <outlet property="classImageView" destination="4q3-6g-XEs" id="gfn-aY-vkU"/>
                         <outlet property="classTimeLabel" destination="OM2-b8-i05" id="EWP-df-wW2"/>
