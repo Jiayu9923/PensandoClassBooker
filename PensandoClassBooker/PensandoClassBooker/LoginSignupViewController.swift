@@ -20,6 +20,8 @@ class LoginSignupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.barTintColor = UIColor.systemTeal
  
         // Do any additional setup after loading the view.
     }

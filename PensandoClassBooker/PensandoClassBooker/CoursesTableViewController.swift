@@ -18,7 +18,7 @@ class CoursesTableViewController: UITableViewController, UISearchResultsUpdating
     
     var currentCourses: [Course] = []
     var filteredCourses: [Course] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

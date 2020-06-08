@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		07A8DD59BD051949379E88C0 /* Pods_PensandoClassBooker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02268F4F605127EFBC4C7946 /* Pods_PensandoClassBooker.framework */; };
-		E9548894247CF3C300DA22E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9548893247CF3C300DA22E9 /* GoogleService-Info.plist */; };
 		E95BE406247E739300F134F0 /* LoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BE405247E739300F134F0 /* LoginSignupViewController.swift */; };
 		E95BE40A247EB68200F134F0 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BE409247EB68200F134F0 /* Classes.swift */; };
 		E97A598E247425AB002CAB6B /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97A598D247425AB002CAB6B /* CoursesTableViewController.swift */; };
 		E97A5990247425B6002CAB6B /* TutorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97A598F247425B6002CAB6B /* TutorsTableViewController.swift */; };
 		E97A5994247433C8002CAB6B /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97A5993247433C8002CAB6B /* ProfileTableViewController.swift */; };
+		E98B0F2A248E0B85007DDE88 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E98B0F29248E0B85007DDE88 /* GoogleService-Info.plist */; };
 		E9992FBA247A73B800D59BAE /* ClassMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9992FB9247A73B800D59BAE /* ClassMapViewController.swift */; };
 		E9992FBE247AA8C200D59BAE /* CourseTutor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9992FBC247AA8C200D59BAE /* CourseTutor.xcdatamodeld */; };
 		E9992FD1247AAB9D00D59BAE /* DatabaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9992FD0247AAB9D00D59BAE /* DatabaseProtocol.swift */; };
@@ -44,7 +44,6 @@
 		02268F4F605127EFBC4C7946 /* Pods_PensandoClassBooker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PensandoClassBooker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87EE72A89491A3AD68454A73 /* Pods-PensandoClassBooker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PensandoClassBooker.debug.xcconfig"; path = "Target Support Files/Pods-PensandoClassBooker/Pods-PensandoClassBooker.debug.xcconfig"; sourceTree = "<group>"; };
 		E2C7837A785C5849DF17CE52 /* Pods-PensandoClassBooker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PensandoClassBooker.release.xcconfig"; path = "Target Support Files/Pods-PensandoClassBooker/Pods-PensandoClassBooker.release.xcconfig"; sourceTree = "<group>"; };
-		E9548893247CF3C300DA22E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E95BE401247E538500F134F0 /* PensandoClassBookerDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PensandoClassBookerDebug.entitlements; sourceTree = "<group>"; };
 		E95BE402247E538F00F134F0 /* PensandoClassBooker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PensandoClassBooker.entitlements; sourceTree = "<group>"; };
 		E95BE405247E739300F134F0 /* LoginSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		E97A598D247425AB002CAB6B /* CoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
 		E97A598F247425B6002CAB6B /* TutorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorsTableViewController.swift; sourceTree = "<group>"; };
 		E97A5993247433C8002CAB6B /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		E98B0F29248E0B85007DDE88 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E9992FB9247A73B800D59BAE /* ClassMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassMapViewController.swift; sourceTree = "<group>"; };
 		E9992FBD247AA8C200D59BAE /* CourseTutor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CourseTutor.xcdatamodel; sourceTree = "<group>"; };
 		E9992FD0247AAB9D00D59BAE /* DatabaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseProtocol.swift; sourceTree = "<group>"; };
@@ -152,6 +152,7 @@
 		E9ADF73424718DB0004E577E /* PensandoClassBooker */ = {
 			isa = PBXGroup;
 			children = (
+				E98B0F29248E0B85007DDE88 /* GoogleService-Info.plist */,
 				E95BE402247E538F00F134F0 /* PensandoClassBooker.entitlements */,
 				E95BE401247E538500F134F0 /* PensandoClassBookerDebug.entitlements */,
 				E9992FCF247AAB7B00D59BAE /* Database */,
@@ -164,7 +165,6 @@
 				E9ADF73E24718DB2004E577E /* Assets.xcassets */,
 				E9ADF74024718DB2004E577E /* LaunchScreen.storyboard */,
 				E9ADF74324718DB2004E577E /* Info.plist */,
-				E9548893247CF3C300DA22E9 /* GoogleService-Info.plist */,
 				E95BE409247EB68200F134F0 /* Classes.swift */,
 				E95BE405247E739300F134F0 /* LoginSignupViewController.swift */,
 				E97A598D247425AB002CAB6B /* CoursesTableViewController.swift */,
@@ -252,7 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9ADF74224718DB2004E577E /* LaunchScreen.storyboard in Resources */,
-				E9548894247CF3C300DA22E9 /* GoogleService-Info.plist in Resources */,
+				E98B0F2A248E0B85007DDE88 /* GoogleService-Info.plist in Resources */,
 				E9ADF73F24718DB2004E577E /* Assets.xcassets in Resources */,
 				E9ADF73D24718DB0004E577E /* Main.storyboard in Resources */,
 			);

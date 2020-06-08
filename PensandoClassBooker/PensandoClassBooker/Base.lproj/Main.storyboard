@@ -10,7 +10,7 @@
         <!--Courses-->
         <scene sceneID="fhG-8h-HlC">
             <objects>
-                <navigationController id="Iu9-Z0-OmL" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" id="Iu9-Z0-OmL" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Courses" image="courses" id="2hn-e4-crY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UV9-xz-ah4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -27,7 +27,7 @@
         <!--Courses-->
         <scene sceneID="X3w-Zs-p1i">
             <objects>
-                <tableViewController id="q2f-1T-p7h" customClass="CoursesTableViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" id="q2f-1T-p7h" customClass="CoursesTableViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZUo-Hv-Tfu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -489,7 +489,7 @@
         <!--Tutors-->
         <scene sceneID="pqT-Xw-7yb">
             <objects>
-                <tableViewController id="AaZ-we-TTZ" customClass="TutorsTableViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" id="AaZ-we-TTZ" customClass="TutorsTableViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0lP-It-RWx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -551,7 +551,7 @@
         <!--My Classes-->
         <scene sceneID="HUM-VE-d52">
             <objects>
-                <tableViewController id="NQ5-oD-hUd" customClass="MyClassTableViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" id="NQ5-oD-hUd" customClass="MyClassTableViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="p3w-ry-nji">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -631,7 +631,7 @@
         <!--Profile-->
         <scene sceneID="H77-tK-m4l">
             <objects>
-                <tableViewController id="KLf-5B-JEo" customClass="ProfileTableViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" id="KLf-5B-JEo" customClass="ProfileTableViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mB8-B0-JQz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -864,7 +864,7 @@
             </objects>
             <point key="canvasLocation" x="5171.0144927536239" y="859.82142857142856"/>
         </scene>
-        <!--Login Signup View Controller-->
+        <!--Item-->
         <scene sceneID="YqZ-PP-PEu">
             <objects>
                 <viewController id="Zv8-GK-abg" customClass="LoginSignupViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
@@ -953,20 +953,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qRH-aS-fEf"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="F8r-V3-LCq"/>
+                    <navigationItem key="navigationItem" id="U6E-dX-BVG"/>
                     <connections>
                         <outlet property="emailTextField" destination="6YG-Ea-BB0" id="IDQ-CQ-CTG"/>
                         <outlet property="passwordTextField" destination="8uP-zx-InW" id="qhe-vh-oo5"/>
-                        <segue destination="m3i-ef-J8j" kind="show" identifier="homeSegue" id="xeF-nl-VJt"/>
+                        <segue destination="m3i-ef-J8j" kind="showDetail" identifier="homeSegue" id="DdN-Rc-Rht"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6qW-eZ-No8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2861" y="-612"/>
+            <point key="canvasLocation" x="2871" y="-706"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ASX-vF-u66">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="m3i-ef-J8j" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="m3i-ef-J8j" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="DyQ-yt-IQ6"/>
                     <tabBar key="tabBar" tag="5" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="N1r-RB-P2N">
@@ -983,12 +985,12 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fQN-XV-utO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3723" y="-612"/>
+            <point key="canvasLocation" x="3755" y="-706"/>
         </scene>
         <!--Tutors-->
         <scene sceneID="pkJ-i5-Xhu">
             <objects>
-                <navigationController id="d8e-0O-kpw" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" id="d8e-0O-kpw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Tutors" image="tutors" id="TwN-ri-YdR"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vEz-4v-UjX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -1005,7 +1007,7 @@
         <!--My Classes-->
         <scene sceneID="pvL-gr-cpt">
             <objects>
-                <navigationController id="aZU-mF-pcn" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" id="aZU-mF-pcn" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Classes" image="myClasses" id="axs-pl-jXB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w4q-iR-u2b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -1022,7 +1024,7 @@
         <!--Me-->
         <scene sceneID="dKt-PD-aSB">
             <objects>
-                <navigationController id="mAf-lJ-Usw" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" id="mAf-lJ-Usw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Me" image="me" id="uiq-LX-dxS"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SyI-s3-9fc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -1038,7 +1040,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vtY-hI-T2P"/>
+        <segue reference="dFd-Ht-mbU"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="courses" width="23" height="23"/>
