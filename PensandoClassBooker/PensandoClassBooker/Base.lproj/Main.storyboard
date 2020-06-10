@@ -649,38 +649,38 @@
                         <sections>
                             <tableViewSection id="mLo-5v-v7H">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" rowHeight="120" id="DYD-pX-c8a" customClass="UserTableViewCell" customModule="PensandoClassBooker" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="userCell" rowHeight="120" id="DYD-pX-c8a" customClass="UserTableViewCell" customModule="PensandoClassBooker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DYD-pX-c8a" id="Aeo-Go-Wvy">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mdg-PM-Wz2">
-                                                    <rect key="frame" x="39" y="30" width="60" height="60"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="IC5-x9-XhK"/>
-                                                        <constraint firstAttribute="width" constant="60" id="Qyp-QD-KRz"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4J-4x-zlH">
-                                                    <rect key="frame" x="115" y="50" width="263" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daisy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4J-4x-zlH">
+                                                    <rect key="frame" x="126" y="50" width="233" height="24"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Logo40pt" translatesAutoresizingMaskIntoConstraints="NO" id="Isq-61-XlY">
+                                                    <rect key="frame" x="20" y="15" width="90" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="ba7-de-oaZ"/>
+                                                        <constraint firstAttribute="height" constant="90" id="i7q-Jr-Wsc"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="mdg-PM-Wz2" firstAttribute="top" secondItem="Aeo-Go-Wvy" secondAttribute="topMargin" constant="19" id="5Ra-1n-1gf"/>
-                                                <constraint firstItem="mdg-PM-Wz2" firstAttribute="leading" secondItem="Aeo-Go-Wvy" secondAttribute="leadingMargin" constant="19" id="Qi1-Po-u1O"/>
+                                                <constraint firstItem="Isq-61-XlY" firstAttribute="leading" secondItem="Aeo-Go-Wvy" secondAttribute="leadingMargin" id="FHw-4X-3iM"/>
+                                                <constraint firstItem="N4J-4x-zlH" firstAttribute="leading" secondItem="Isq-61-XlY" secondAttribute="trailing" constant="16" id="O4U-Hu-hdi"/>
+                                                <constraint firstItem="Isq-61-XlY" firstAttribute="top" secondItem="Aeo-Go-Wvy" secondAttribute="topMargin" constant="4" id="dRs-Ja-9zR"/>
                                                 <constraint firstItem="N4J-4x-zlH" firstAttribute="top" secondItem="Aeo-Go-Wvy" secondAttribute="topMargin" constant="39" id="gTi-hj-8Od"/>
-                                                <constraint firstItem="N4J-4x-zlH" firstAttribute="leading" secondItem="mdg-PM-Wz2" secondAttribute="trailing" constant="16" id="t3R-bF-9N6"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="N4J-4x-zlH" secondAttribute="trailing" constant="16" id="zzk-gS-gW2"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="userImageView" destination="mdg-PM-Wz2" id="X59-sp-kGX"/>
                                             <outlet property="userNameLabel" destination="N4J-4x-zlH" id="7fQ-l4-odP"/>
+                                            <segue destination="z5S-Dh-ovG" kind="show" identifier="changePhoto" id="EBu-CU-9Sm"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -869,10 +869,105 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Me" image="me" id="ykc-y9-Yx3"/>
                     <navigationItem key="navigationItem" title="Profile" id="JFS-9s-zHp"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="Isq-61-XlY" id="Yvd-5H-ale"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVl-qG-vLO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5171.0144927536239" y="859.82142857142856"/>
+        </scene>
+        <!--Change Profile Photo-->
+        <scene sceneID="UjZ-BD-WpM">
+            <objects>
+                <viewController wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="z5S-Dh-ovG" customClass="ProfilePhotoViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mps-S3-Zid">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Is1-mc-bQN">
+                                <rect key="frame" x="82" y="76" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="UEs-dS-5A6"/>
+                                    <constraint firstAttribute="height" constant="250" id="sL2-sj-ZNh"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBe-Gu-EQP">
+                                <rect key="frame" x="16" y="346" width="128" height="40"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="ZcT-dD-gW7"/>
+                                    <constraint firstAttribute="width" constant="128" id="fen-BB-xLr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Choose Photo">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="choosePhoto:" destination="z5S-Dh-ovG" eventType="touchUpInside" id="dST-Ht-7oH"/>
+                                    <action selector="loginDidTouch:" destination="Zv8-GK-abg" eventType="touchUpInside" id="E6z-U9-qSN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nmf-YD-eAu">
+                                <rect key="frame" x="270" y="346" width="128" height="40"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="KLK-nQ-V8o"/>
+                                    <constraint firstAttribute="width" constant="128" id="c1Q-Cy-xLe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Save Photo">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginDidTouch:" destination="Zv8-GK-abg" eventType="touchUpInside" id="4YC-hP-eUk"/>
+                                    <action selector="savePhoto:" destination="z5S-Dh-ovG" eventType="touchUpInside" id="WZe-4V-jIy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Nmf-YD-eAu" firstAttribute="top" secondItem="Is1-mc-bQN" secondAttribute="bottom" constant="20" id="GDW-IX-al5"/>
+                            <constraint firstItem="RBe-Gu-EQP" firstAttribute="top" secondItem="Is1-mc-bQN" secondAttribute="bottom" constant="20" id="Nkr-EE-zAU"/>
+                            <constraint firstItem="RBe-Gu-EQP" firstAttribute="leading" secondItem="oG2-tC-biN" secondAttribute="leading" constant="16" id="Q4b-mn-ZJ4"/>
+                            <constraint firstItem="Is1-mc-bQN" firstAttribute="leading" secondItem="oG2-tC-biN" secondAttribute="leading" constant="82" id="b4L-ix-I9t"/>
+                            <constraint firstItem="oG2-tC-biN" firstAttribute="trailing" secondItem="Is1-mc-bQN" secondAttribute="trailing" constant="82" id="nyK-Vw-8XL"/>
+                            <constraint firstItem="oG2-tC-biN" firstAttribute="trailing" secondItem="Nmf-YD-eAu" secondAttribute="trailing" constant="16" id="ya2-iS-rh3"/>
+                            <constraint firstItem="Is1-mc-bQN" firstAttribute="top" secondItem="oG2-tC-biN" secondAttribute="top" constant="20" id="zlO-67-4YL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oG2-tC-biN"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Change Profile Photo" id="c8r-zg-LcF">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6CV-7x-Ws5">
+                            <connections>
+                                <action selector="cancelClick:" destination="z5S-Dh-ovG" id="pZJ-xU-WjM"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Reset" id="maK-UV-GjC">
+                            <connections>
+                                <action selector="resetPhoto:" destination="z5S-Dh-ovG" id="o4T-18-zCq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="profilePhotoImageView" destination="Is1-mc-bQN" id="qkN-a7-svL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M93-at-RIa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6118.840579710145" y="859.82142857142856"/>
         </scene>
         <!--Item-->
         <scene sceneID="YqZ-PP-PEu">
@@ -1050,6 +1145,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Logo40pt" width="40" height="40"/>
         <image name="courses" width="23" height="23"/>
         <image name="location" width="46" height="46"/>
         <image name="me" width="23" height="23"/>

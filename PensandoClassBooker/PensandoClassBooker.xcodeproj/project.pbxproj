@@ -31,6 +31,7 @@
 		E9ADF74224718DB2004E577E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9ADF74024718DB2004E577E /* LaunchScreen.storyboard */; };
 		E9AFBB9A24763A030014C581 /* TutorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AFBB9924763A030014C581 /* TutorTableViewCell.swift */; };
 		E9AFBBA524767CD40014C581 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AFBBA424767CD40014C581 /* CourseTableViewCell.swift */; };
+		E9C85D7E24911FC5002387D1 /* ProfilePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C85D7D24911FC5002387D1 /* ProfilePhotoViewController.swift */; };
 		E9D7FCFE2473A86F00053922 /* MyClassesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7FCFD2473A86F00053922 /* MyClassesTableViewController.swift */; };
 		E9E2EC0324790ECD00302537 /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2EC0224790ECD00302537 /* CourseDetailViewController.swift */; };
 		E9E2EC052479124200302537 /* AddClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2EC042479124200302537 /* AddClassViewController.swift */; };
@@ -72,6 +73,7 @@
 		E9ADF74324718DB2004E577E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9AFBB9924763A030014C581 /* TutorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorTableViewCell.swift; sourceTree = "<group>"; };
 		E9AFBBA424767CD40014C581 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
+		E9C85D7D24911FC5002387D1 /* ProfilePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoViewController.swift; sourceTree = "<group>"; };
 		E9D7FCFD2473A86F00053922 /* MyClassesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClassesTableViewController.swift; sourceTree = "<group>"; };
 		E9E2EC0224790ECD00302537 /* CourseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailViewController.swift; sourceTree = "<group>"; };
 		E9E2EC042479124200302537 /* AddClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClassViewController.swift; sourceTree = "<group>"; };
@@ -108,7 +110,6 @@
 				D52DEE8C9ABA97E2B14E3142 /* Pods-PensandoClassBooker.debug.xcconfig */,
 				6577DC75FDD60940E63B7FBE /* Pods-PensandoClassBooker.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -180,6 +181,7 @@
 				E9E2EC0924795F5A00302537 /* ClassDetailViewController.swift */,
 				E9992FB9247A73B800D59BAE /* ClassMapViewController.swift */,
 				E9E781BC248FECA800904241 /* VolumeData.swift */,
+				E9C85D7D24911FC5002387D1 /* ProfilePhotoViewController.swift */,
 			);
 			path = PensandoClassBooker;
 			sourceTree = "<group>";
@@ -313,6 +315,7 @@
 			files = (
 				E9E2EC052479124200302537 /* AddClassViewController.swift in Sources */,
 				E9E781BD248FECA800904241 /* VolumeData.swift in Sources */,
+				E9C85D7E24911FC5002387D1 /* ProfilePhotoViewController.swift in Sources */,
 				E9AFBB9A24763A030014C581 /* TutorTableViewCell.swift in Sources */,
 				E9ADF73A24718DB0004E577E /* ViewController.swift in Sources */,
 				E9ADF73624718DB0004E577E /* AppDelegate.swift in Sources */,

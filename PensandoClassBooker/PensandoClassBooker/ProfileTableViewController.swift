@@ -13,6 +13,8 @@ class ProfileTableViewController: UITableViewController {
     let SECTION_USER = 0
     let CELL_USER = "userCell"
 
+    @IBOutlet weak var photoImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,12 +23,13 @@ class ProfileTableViewController: UITableViewController {
         navigationController?.navigationBar.barTintColor = UIColor.systemTeal
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
 
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        // Set the wallpage if UserDefaults(forKey: "backgroundPicture") is not nil.
+        let photo = UserDefaults.init(suiteName: "group.Jiayu.Pensando")?.value(forKey: "photoImage")
+        if photo != nil{
+            self.photoImageView.image = UIImage(data: photo as! Data)?.alpha(0.8)
+            let mainImageView = UIImageView(image:self.photoImageView.image)
+            mainImageView.contentMode = .scaleAspectFit
+        }
     }
 
     // MARK: - Table view data source
@@ -49,50 +52,6 @@ class ProfileTableViewController: UITableViewController {
         }
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     /*
     // MARK: - Navigation
@@ -104,4 +63,15 @@ class ProfileTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension UIImage {
+    
+    func alpha(_ value:CGFloat) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        draw(at: CGPoint.zero, blendMode: .normal, alpha: value)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage!
+    }
 }
