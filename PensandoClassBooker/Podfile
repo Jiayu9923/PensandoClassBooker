@@ -6,7 +6,10 @@ target 'PensandoClassBooker' do
   use_frameworks!
 
   # Pods for PensandoClassBooker
-pod 'Firebase/Analytics'
-pod 'Firebase/Auth'
-pod 'Firebase/Firestore'
+	pod 'Firebase/Analytics'
+	pod 'Firebase/Auth'
+	pod 'Firebase/Firestore'
+	pod 'Firebase/Database'
+	pod 'FirebaseFirestoreSwift'
+	pod 'Firebase/Core'
 end

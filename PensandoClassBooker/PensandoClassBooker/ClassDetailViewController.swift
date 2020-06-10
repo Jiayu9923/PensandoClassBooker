@@ -22,6 +22,8 @@ class ClassDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //slef.tabBarController?.tabBar.isHidden = true
+        
         navigationController?.navigationBar.barTintColor = UIColor.systemTeal
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
 
@@ -40,18 +42,22 @@ class ClassDetailViewController: UIViewController {
         courseNameLabel.text = classes.name
         classTimeLabel.text = dateFormatter.string(from: classes.time as Date)
         classTutorLabel.text = "Tutors: \(classes.tutor)"
+        mapButton.setTitle(classes.address, for: .normal)
         
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        // Send the address to map controller
+        if segue.identifier == "mapSegue" {
+            let destination = segue.destination as! ClassMapViewController
+            destination.classAddress = classes!.address
+        }
     }
-    */
+    
 
 }

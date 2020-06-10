@@ -22,6 +22,8 @@ class TutorsTableViewController: UITableViewController, UISearchResultsUpdating,
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //slef.tabBarController?.tabBar.isHidden = false
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         databaseController = appDelegate.databaseController
         

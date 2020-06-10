@@ -21,6 +21,8 @@ class TutorDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //slef.tabBarController?.tabBar.isHidden = true
+        
         navigationController?.navigationBar.barTintColor = UIColor.systemTeal
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         

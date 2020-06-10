@@ -95,7 +95,7 @@
         <!--courseCode-->
         <scene sceneID="xfn-Pn-NWv">
             <objects>
-                <viewController id="P2A-Ez-8c4" customClass="CourseDetailViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="P2A-Ez-8c4" customClass="CourseDetailViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4zG-wg-g5b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,13 +152,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jAN-lQ-CG2"/>
                     </view>
-                    <navigationItem key="navigationItem" title="courseCode" id="mbg-N4-y7p">
-                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="r5h-eD-snf">
-                            <connections>
-                                <segue destination="qiN-Ic-dzM" kind="show" identifier="bookCourseSegue" id="U7r-X5-Ccl"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="courseCode" id="mbg-N4-y7p"/>
                     <connections>
                         <outlet property="courseCodeLabel" destination="lwK-qg-Uqu" id="HuK-SM-EhL"/>
                         <outlet property="courseImageView" destination="oDi-7K-DhI" id="qEI-9j-ZFK"/>
@@ -174,7 +168,7 @@
         <!--tutorName-->
         <scene sceneID="o0O-cH-D5W">
             <objects>
-                <viewController id="GsF-GP-7Yb" customClass="TutorDetailViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="GsF-GP-7Yb" customClass="TutorDetailViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I6q-ee-D3v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,7 +241,7 @@
         <!--courseCode-->
         <scene sceneID="m45-eZ-1Tn">
             <objects>
-                <viewController id="EGn-zb-vQ5" customClass="ClassDetailViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="EGn-zb-vQ5" customClass="ClassDetailViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="auM-GJ-UKd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -357,7 +351,7 @@
         <!--Address-->
         <scene sceneID="fg3-ay-RU3">
             <objects>
-                <viewController id="SuC-CW-XR7" customClass="ClassMapViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="SuC-CW-XR7" customClass="ClassMapViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6OS-Tr-kYg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -371,6 +365,9 @@
                         <viewLayoutGuide key="safeArea" id="ijk-ak-4ya"/>
                     </view>
                     <navigationItem key="navigationItem" title="Address" id="mPC-Pd-Smk"/>
+                    <connections>
+                        <outlet property="mapView" destination="By4-6z-uvl" id="fFw-Q2-HZn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFj-fl-YrZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -379,112 +376,113 @@
         <!--Add Class-->
         <scene sceneID="Mz6-J4-3bs">
             <objects>
-                <viewController id="qiN-Ic-dzM" customClass="AddClassViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="qiN-Ic-dzM" customClass="AddClassViewController" customModule="PensandoClassBooker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oDQ-ca-SQC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="courseCode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68b-iD-QLZ">
-                                <rect key="frame" x="16" y="72" width="115" height="24"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B3R-k3-HEU">
-                                <rect key="frame" x="87" y="104" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="S1o-I2-uly"/>
-                                    <constraint firstAttribute="width" constant="240" id="jgj-8c-WaW"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeN-cD-W7m">
-                                <rect key="frame" x="16" y="257" width="382" height="21"/>
+                                <rect key="frame" x="16" y="151" width="382" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Time..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hkj-dt-W8R" userLabel="Time Text Field">
-                                <rect key="frame" x="16" y="286" width="382" height="34"/>
+                                <rect key="frame" x="16" y="180" width="382" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tutor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnz-Hb-i9U">
-                                <rect key="frame" x="16" y="336" width="382" height="21"/>
+                                <rect key="frame" x="16" y="230" width="382" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tutor..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eDs-gm-Elh" userLabel="Tutor Text Field">
-                                <rect key="frame" x="16" y="365" width="382" height="34"/>
+                                <rect key="frame" x="16" y="259" width="382" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIs-k7-L0Q">
-                                <rect key="frame" x="16" y="415" width="382" height="21"/>
+                                <rect key="frame" x="16" y="309" width="382" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fj6-ho-k67" userLabel="Address Text Field">
-                                <rect key="frame" x="16" y="444" width="382" height="34"/>
+                                <rect key="frame" x="16" y="338" width="382" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="courseName" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLg-bg-UFj">
-                                <rect key="frame" x="147" y="72" width="120" height="24"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJ3-RY-igw">
+                                <rect key="frame" x="16" y="72" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Class code..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bua-Ya-IVK">
+                                <rect key="frame" x="16" y="101" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="PfT-sF-dCq" firstAttribute="trailing" secondItem="Fj6-ho-k67" secondAttribute="trailing" constant="16" id="2Ip-pn-rN2"/>
+                            <constraint firstItem="dJ3-RY-igw" firstAttribute="top" secondItem="PfT-sF-dCq" secondAttribute="top" constant="16" id="2S1-Pi-PbM"/>
+                            <constraint firstItem="PfT-sF-dCq" firstAttribute="trailing" secondItem="Bua-Ya-IVK" secondAttribute="trailing" constant="16" id="4H0-YF-Si4"/>
                             <constraint firstItem="PfT-sF-dCq" firstAttribute="trailing" secondItem="pnz-Hb-i9U" secondAttribute="trailing" constant="16" id="8nr-za-QXx"/>
                             <constraint firstItem="eDs-gm-Elh" firstAttribute="leading" secondItem="PfT-sF-dCq" secondAttribute="leading" constant="16" id="9LB-Xt-1O6"/>
-                            <constraint firstItem="PfT-sF-dCq" firstAttribute="trailing" secondItem="B3R-k3-HEU" secondAttribute="trailing" constant="87" id="AOC-AK-EBg"/>
-                            <constraint firstItem="B3R-k3-HEU" firstAttribute="top" secondItem="68b-iD-QLZ" secondAttribute="bottom" constant="8" id="EEh-u5-6MN"/>
-                            <constraint firstItem="bIs-k7-L0Q" firstAttribute="top" secondItem="eDs-gm-Elh" secondAttribute="bottom" constant="16" id="IV9-iu-ixc"/>
-                            <constraint firstItem="68b-iD-QLZ" firstAttribute="top" secondItem="PfT-sF-dCq" secondAttribute="top" constant="16" id="Jx8-uN-owh"/>
-                            <constraint firstItem="lLg-bg-UFj" firstAttribute="leading" secondItem="68b-iD-QLZ" secondAttribute="trailing" constant="8" id="Kny-ce-Mvq"/>
+                            <constraint firstItem="dJ3-RY-igw" firstAttribute="leading" secondItem="PfT-sF-dCq" secondAttribute="leading" constant="16" id="Eeq-2K-1Wc"/>
                             <constraint firstItem="PfT-sF-dCq" firstAttribute="trailing" secondItem="Hkj-dt-W8R" secondAttribute="trailing" constant="16" id="LeO-5M-FrH"/>
-                            <constraint firstItem="PfT-sF-dCq" firstAttribute="trailing" secondItem="lLg-bg-UFj" secondAttribute="trailing" constant="8" id="QEi-qY-PBg"/>
-                            <constraint firstItem="68b-iD-QLZ" firstAttribute="leading" secondItem="PfT-sF-dCq" secondAttribute="leading" constant="16" id="RIl-I7-8Yp"/>
+                            <constraint firstItem="eDs-gm-Elh" firstAttribute="top" secondItem="pnz-Hb-i9U" secondAttribute="bottom" constant="8" id="PXp-Tn-Cy6"/>
                             <constraint firstItem="Hkj-dt-W8R" firstAttribute="leading" secondItem="PfT-sF-dCq" secondAttribute="leading" constant="16" id="S4j-cf-z8t"/>
-                            <constraint firstItem="Hkj-dt-W8R" firstAttribute="top" secondItem="YeN-cD-W7m" secondAttribute="bottom" constant="8" id="TYc-hK-Bp1"/>
+                            <constraint firstItem="Hkj-dt-W8R" firstAttribute="top" secondItem="YeN-cD-W7m" secondAttribute="bottom" constant="8" id="UXS-uD-fhE"/>
+                            <constraint firstItem="Bua-Ya-IVK" firstAttribute="leading" secondItem="PfT-sF-dCq" secondAttribute="leading" constant="16" id="UbC-F7-Y8F"/>
                             <constraint firstItem="PfT-sF-dCq" firstAttribute="trailing" secondItem="YeN-cD-W7m" secondAttribute="trailing" constant="16" id="UbH-TV-sCn"/>
-                            <constraint firstItem="B3R-k3-HEU" firstAttribute="leading" secondItem="PfT-sF-dCq" secondAttribute="leading" constant="87" id="Urr-Wq-1i5"/>
                             <constraint firstItem="PfT-sF-dCq" firstAttribute="trailing" secondItem="bIs-k7-L0Q" secondAttribute="trailing" constant="16" id="XSF-AX-KTg"/>
-                            <constraint firstItem="lLg-bg-UFj" firstAttribute="top" secondItem="PfT-sF-dCq" secondAttribute="top" constant="16" id="YXY-39-9hD"/>
                             <constraint firstItem="pnz-Hb-i9U" firstAttribute="leading" secondItem="PfT-sF-dCq" secondAttribute="leading" constant="16" id="ZAo-QA-gEr"/>
-                            <constraint firstItem="pnz-Hb-i9U" firstAttribute="top" secondItem="Hkj-dt-W8R" secondAttribute="bottom" constant="16" id="eHF-nb-iBJ"/>
                             <constraint firstItem="YeN-cD-W7m" firstAttribute="leading" secondItem="PfT-sF-dCq" secondAttribute="leading" constant="16" id="g9F-0k-Q0k"/>
+                            <constraint firstItem="YeN-cD-W7m" firstAttribute="top" secondItem="Bua-Ya-IVK" secondAttribute="bottom" constant="16" id="gdk-rT-Ezg"/>
                             <constraint firstItem="bIs-k7-L0Q" firstAttribute="leading" secondItem="PfT-sF-dCq" secondAttribute="leading" constant="16" id="hMT-I0-UI3"/>
-                            <constraint firstItem="Fj6-ho-k67" firstAttribute="top" secondItem="bIs-k7-L0Q" secondAttribute="bottom" constant="8" id="m8w-PK-A2w"/>
-                            <constraint firstItem="YeN-cD-W7m" firstAttribute="top" secondItem="B3R-k3-HEU" secondAttribute="bottom" constant="25" id="mTg-xa-FDu"/>
+                            <constraint firstItem="PfT-sF-dCq" firstAttribute="trailing" secondItem="dJ3-RY-igw" secondAttribute="trailing" constant="16" id="iJD-mT-GcR"/>
+                            <constraint firstItem="bIs-k7-L0Q" firstAttribute="top" secondItem="eDs-gm-Elh" secondAttribute="bottom" constant="16" id="l1Z-DH-tcH"/>
+                            <constraint firstItem="Bua-Ya-IVK" firstAttribute="top" secondItem="dJ3-RY-igw" secondAttribute="bottom" constant="8" id="nQF-Yo-lxi"/>
                             <constraint firstItem="Fj6-ho-k67" firstAttribute="leading" secondItem="PfT-sF-dCq" secondAttribute="leading" constant="16" id="noR-Vt-ebx"/>
-                            <constraint firstItem="eDs-gm-Elh" firstAttribute="top" secondItem="pnz-Hb-i9U" secondAttribute="bottom" constant="8" id="rw7-hN-1Lf"/>
+                            <constraint firstItem="Fj6-ho-k67" firstAttribute="top" secondItem="bIs-k7-L0Q" secondAttribute="bottom" constant="8" id="p7J-05-hMX"/>
+                            <constraint firstItem="pnz-Hb-i9U" firstAttribute="top" secondItem="Hkj-dt-W8R" secondAttribute="bottom" constant="16" id="sBl-mk-HfY"/>
                             <constraint firstItem="PfT-sF-dCq" firstAttribute="trailing" secondItem="eDs-gm-Elh" secondAttribute="trailing" constant="16" id="z39-cJ-6Gw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PfT-sF-dCq"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Class" id="KHJ-HM-l2D">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="YUo-T4-N9N">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Z7T-2a-EWi">
+                                <rect key="frame" x="20" y="11.5" width="53" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Cancel"/>
+                            </button>
+                            <connections>
+                                <action selector="cancelClick:" destination="qiN-Ic-dzM" id="I5Y-z3-arN"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="nYf-l7-lW1">
                             <connections>
                                 <action selector="saveClasses:" destination="qiN-Ic-dzM" id="bBs-6b-fHe"/>
-                                <segue destination="NQ5-oD-hUd" kind="show" id="vtY-hI-T2P"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="classImageView" destination="B3R-k3-HEU" id="xvj-Mb-n9v"/>
-                        <outlet property="courseCodeLabel" destination="68b-iD-QLZ" id="Lmu-BW-663"/>
-                        <outlet property="courseNameLabel" destination="lLg-bg-UFj" id="82B-vZ-myz"/>
+                        <outlet property="addressTextField" destination="Fj6-ho-k67" id="X4I-c7-JEV"/>
+                        <outlet property="codeTextField" destination="Bua-Ya-IVK" id="bcP-K9-IP5"/>
+                        <outlet property="timeTextField" destination="Hkj-dt-W8R" id="WrE-uT-PcV"/>
+                        <outlet property="tutorTextField" destination="eDs-gm-Elh" id="YYP-pb-Cev"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHt-uR-2jk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2279.7101449275365" y="2308.2589285714284"/>
+            <point key="canvasLocation" x="5034.7826086956529" y="1579.6875"/>
         </scene>
         <!--Tutors-->
         <scene sceneID="pqT-Xw-7yb">
@@ -556,13 +554,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <segmentedControl key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="lYT-oC-7W8">
+                        <segmentedControl key="tableHeaderView" hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="lYT-oC-7W8">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Upcoming"/>
                                 <segment title="Past Classes"/>
                             </segments>
+                            <connections>
+                                <action selector="classTypeChanged:" destination="NQ5-oD-hUd" eventType="valueChanged" id="So0-XJ-42H"/>
+                            </connections>
                         </segmentedControl>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="classCell" rowHeight="100" id="tzR-WR-9PK" customClass="ClassTableViewCell" customModule="PensandoClassBooker" customModuleProvider="target">
@@ -622,7 +623,16 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="My Classes" image="myClasses" id="hxE-x5-CJg"/>
-                    <navigationItem key="navigationItem" title="My Classes" id="bjs-dP-ody"/>
+                    <navigationItem key="navigationItem" title="My Classes" id="bjs-dP-ody">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="Cpr-co-gVW">
+                            <connections>
+                                <segue destination="qiN-Ic-dzM" kind="show" identifier="addClass" id="izq-Af-WTt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="classTypeSegmentedControl" destination="lYT-oC-7W8" id="DTP-1Q-MgG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3jl-jZ-ORp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1039,9 +1049,6 @@
             <point key="canvasLocation" x="5171" y="144"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="dFd-Ht-mbU"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="courses" width="23" height="23"/>
         <image name="location" width="46" height="46"/>

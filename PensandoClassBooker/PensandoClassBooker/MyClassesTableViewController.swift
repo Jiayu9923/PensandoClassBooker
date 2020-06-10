@@ -7,19 +7,30 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class MyClassTableViewController: UITableViewController {
     
+    @IBOutlet weak var classTypeSegmentedControl: UISegmentedControl!
     var classes: Classes?
     var upcomingClass: [Classes] = []
     var pastClass: [Classes] = []
     let SECTION_CLASS = 0
     let CELL_CLASS = "classCell"
+    
+    let ref = Database.database().reference(withPath: "Classes")
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        createDefaultClasses()
+        //slef.tabBarController?.tabBar.isHidden = false
+
+        ref.observe(.value, with: { snapshot in
+            print(snapshot.value as Any)
+        })
+        
+        //createDefaultClasses()
         
         navigationController?.navigationBar.barTintColor = UIColor.systemTeal
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
@@ -29,6 +40,11 @@ class MyClassTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+//        Auth.auth().addStateDidChangeListener { auth, user in
+//            guard let user = user else { return }
+//            self.user = User(authData: user)
+//        }
     }
 
     // MARK: - Table view data source
@@ -41,7 +57,12 @@ class MyClassTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         //return currentClasses.count
-        return upcomingClass.count
+        if classTypeSegmentedControl.selectedSegmentIndex == 0{
+            return upcomingClass.count
+        }
+        else {
+            return pastClass.count
+        }
     }
 
     
@@ -49,6 +70,21 @@ class MyClassTableViewController: UITableViewController {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+
+//        ref.observe(.value, with: { snapshot in
+//            var newItems: [Classes] = []
+//
+//            for child in snapshot.children {
+//                if let snapshot = child as? DataSnapshot,
+//                    let classes = Classes(snapshot: snapshot) {
+//                    newItems.append(classes)
+//                }
+//            }
+//
+//            self.upcomingClass = newItems
+//            self.tableView.reloadData()
+//        } )
+        
         
         let classCell =
             tableView.dequeueReusableCell(withIdentifier: CELL_CLASS, for: indexPath) as! ClassTableViewCell
@@ -74,7 +110,7 @@ class MyClassTableViewController: UITableViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
         
-        upcomingClass.append(Classes(code: "FIT1023", name: "Fundamental of Python", image: "Python", tutor: "Chloe", address: "1 Mallee Court", time: dateFormatter.date(from: "30/05/2020 12:00")!))
+        upcomingClass.append(Classes(code: "FIT1023", name: "Fundamental of Python", image: "Python", tutor: "Chloe", address: "1 Mallee Court, Mulgrave, VIC3170, Melbourne, Australia", time: dateFormatter.date(from: "30/05/2020 12:00")!))
         upcomingClass.append(Classes(code: "FIT1023", name: "Fundamental of Python", image: "Python", tutor: "Chloe", address: "1 Mallee Court", time: dateFormatter.date(from: "28/05/2020 15:00")!))
     }
 

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07A8DD59BD051949379E88C0 /* Pods_PensandoClassBooker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02268F4F605127EFBC4C7946 /* Pods_PensandoClassBooker.framework */; };
+		1B15079148AE58ED0F37D1B2 /* Pods_PensandoClassBooker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE37149F515C002DC536DA9 /* Pods_PensandoClassBooker.framework */; };
 		E95BE406247E739300F134F0 /* LoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BE405247E739300F134F0 /* LoginSignupViewController.swift */; };
 		E95BE40A247EB68200F134F0 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BE409247EB68200F134F0 /* Classes.swift */; };
 		E97A598E247425AB002CAB6B /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97A598D247425AB002CAB6B /* CoursesTableViewController.swift */; };
@@ -38,12 +38,13 @@
 		E9E2EC0A24795F5A00302537 /* ClassDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2EC0924795F5A00302537 /* ClassDetailViewController.swift */; };
 		E9E2EC0C24796CA500302537 /* ClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2EC0B24796CA500302537 /* ClassTableViewCell.swift */; };
 		E9E2EC122479719200302537 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2EC112479719200302537 /* UserTableViewCell.swift */; };
+		E9E781BD248FECA800904241 /* VolumeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E781BC248FECA800904241 /* VolumeData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		02268F4F605127EFBC4C7946 /* Pods_PensandoClassBooker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PensandoClassBooker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		87EE72A89491A3AD68454A73 /* Pods-PensandoClassBooker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PensandoClassBooker.debug.xcconfig"; path = "Target Support Files/Pods-PensandoClassBooker/Pods-PensandoClassBooker.debug.xcconfig"; sourceTree = "<group>"; };
-		E2C7837A785C5849DF17CE52 /* Pods-PensandoClassBooker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PensandoClassBooker.release.xcconfig"; path = "Target Support Files/Pods-PensandoClassBooker/Pods-PensandoClassBooker.release.xcconfig"; sourceTree = "<group>"; };
+		6577DC75FDD60940E63B7FBE /* Pods-PensandoClassBooker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PensandoClassBooker.release.xcconfig"; path = "Target Support Files/Pods-PensandoClassBooker/Pods-PensandoClassBooker.release.xcconfig"; sourceTree = "<group>"; };
+		CDE37149F515C002DC536DA9 /* Pods_PensandoClassBooker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PensandoClassBooker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D52DEE8C9ABA97E2B14E3142 /* Pods-PensandoClassBooker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PensandoClassBooker.debug.xcconfig"; path = "Target Support Files/Pods-PensandoClassBooker/Pods-PensandoClassBooker.debug.xcconfig"; sourceTree = "<group>"; };
 		E95BE401247E538500F134F0 /* PensandoClassBookerDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PensandoClassBookerDebug.entitlements; sourceTree = "<group>"; };
 		E95BE402247E538F00F134F0 /* PensandoClassBooker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PensandoClassBooker.entitlements; sourceTree = "<group>"; };
 		E95BE405247E739300F134F0 /* LoginSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 		E9E2EC0924795F5A00302537 /* ClassDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDetailViewController.swift; sourceTree = "<group>"; };
 		E9E2EC0B24796CA500302537 /* ClassTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTableViewCell.swift; sourceTree = "<group>"; };
 		E9E2EC112479719200302537 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		E9E781BC248FECA800904241 /* VolumeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,27 +87,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07A8DD59BD051949379E88C0 /* Pods_PensandoClassBooker.framework in Frameworks */,
+				1B15079148AE58ED0F37D1B2 /* Pods_PensandoClassBooker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		24F62046C8863410490A2928 /* Frameworks */ = {
+		19E98540A47ADD665BF92AFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				02268F4F605127EFBC4C7946 /* Pods_PensandoClassBooker.framework */,
+				CDE37149F515C002DC536DA9 /* Pods_PensandoClassBooker.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9EDA9C6D08DA6A2EBEF219B2 /* Pods */ = {
+		56F4D8A7B13FDD51F4B6C3BC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				87EE72A89491A3AD68454A73 /* Pods-PensandoClassBooker.debug.xcconfig */,
-				E2C7837A785C5849DF17CE52 /* Pods-PensandoClassBooker.release.xcconfig */,
+				D52DEE8C9ABA97E2B14E3142 /* Pods-PensandoClassBooker.debug.xcconfig */,
+				6577DC75FDD60940E63B7FBE /* Pods-PensandoClassBooker.release.xcconfig */,
 			);
+			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -136,8 +139,8 @@
 			children = (
 				E9ADF73424718DB0004E577E /* PensandoClassBooker */,
 				E9ADF73324718DB0004E577E /* Products */,
-				9EDA9C6D08DA6A2EBEF219B2 /* Pods */,
-				24F62046C8863410490A2928 /* Frameworks */,
+				56F4D8A7B13FDD51F4B6C3BC /* Pods */,
+				19E98540A47ADD665BF92AFF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,6 +179,7 @@
 				E9E2EC042479124200302537 /* AddClassViewController.swift */,
 				E9E2EC0924795F5A00302537 /* ClassDetailViewController.swift */,
 				E9992FB9247A73B800D59BAE /* ClassMapViewController.swift */,
+				E9E781BC248FECA800904241 /* VolumeData.swift */,
 			);
 			path = PensandoClassBooker;
 			sourceTree = "<group>";
@@ -308,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9E2EC052479124200302537 /* AddClassViewController.swift in Sources */,
+				E9E781BD248FECA800904241 /* VolumeData.swift in Sources */,
 				E9AFBB9A24763A030014C581 /* TutorTableViewCell.swift in Sources */,
 				E9ADF73A24718DB0004E577E /* ViewController.swift in Sources */,
 				E9ADF73624718DB0004E577E /* AppDelegate.swift in Sources */,
@@ -474,7 +479,7 @@
 		};
 		E9ADF74724718DB2004E577E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87EE72A89491A3AD68454A73 /* Pods-PensandoClassBooker.debug.xcconfig */;
+			baseConfigurationReference = D52DEE8C9ABA97E2B14E3142 /* Pods-PensandoClassBooker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PensandoClassBooker/PensandoClassBookerDebug.entitlements;
@@ -494,7 +499,7 @@
 		};
 		E9ADF74824718DB2004E577E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2C7837A785C5849DF17CE52 /* Pods-PensandoClassBooker.release.xcconfig */;
+			baseConfigurationReference = 6577DC75FDD60940E63B7FBE /* Pods-PensandoClassBooker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PensandoClassBooker/PensandoClassBooker.entitlements;
